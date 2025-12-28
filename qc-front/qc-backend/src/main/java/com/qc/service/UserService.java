@@ -123,6 +123,28 @@ public class UserService {
             user.setNickname(userDTO.getNickname());
         }
 
+        if (userDTO.getPhone() != null) {
+            // 检查手机号是否被其他人使用
+            LambdaQueryWrapper<User> wrapper = new LambdaQueryWrapper<>();
+            wrapper.eq(User::getPhone, userDTO.getPhone())
+                   .ne(User::getId, userId);
+            if (userMapper.selectCount(wrapper) > 0) {
+                throw new BusinessException("手机号已被使用");
+            }
+            user.setPhone(userDTO.getPhone());
+        }
+
+        if (userDTO.getEmail() != null) {
+            // 检查邮箱是否被其他人使用
+            LambdaQueryWrapper<User> wrapper = new LambdaQueryWrapper<>();
+            wrapper.eq(User::getEmail, userDTO.getEmail())
+                   .ne(User::getId, userId);
+            if (userMapper.selectCount(wrapper) > 0) {
+                throw new BusinessException("邮箱已被使用");
+            }
+            user.setEmail(userDTO.getEmail());
+        }
+
         if (userDTO.getPassword() != null && !userDTO.getPassword().isEmpty()) {
             if (userDTO.getPassword().length() < 6) {
                 throw new BusinessException("密码长度不能少于6位");
@@ -131,6 +153,25 @@ public class UserService {
         }
 
         userMapper.updateById(user);
+    }
+
+    public void changePassword(Long userId, String oldPassword, String newPassword) {
+        User user = userMapper.selectById(userId);
+        if (user == null) {
+            throw new BusinessException("用户不存在");
+        }
+
+        // 验证原密码
+        String encodedOldPassword = DigestUtils.md5DigestAsHex(oldPassword.getBytes(StandardCharsets.UTF_8));
+        if (!user.getPassword().equals(encodedOldPassword)) {
+            throw new BusinessException("原密码错误");
+        }
+
+        // 更新密码
+        user.setPassword(DigestUtils.md5DigestAsHex(newPassword.getBytes(StandardCharsets.UTF_8)));
+        userMapper.updateById(user);
+
+        log.info("用户修改密码成功 - userId: {}", userId);
     }
 
     private UserVO getUserVO(User user) {

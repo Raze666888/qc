@@ -8068,3 +8068,1477 @@ JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed 
 <==        Row: 16, 12, 我的期望的, 0, 1, 1, null, 0, 2025-12-28 14:10:46, 2025-12-28 14:10:46, 0
 <==      Total: 1
 Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@19267577]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@49520d89] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,user_id,title,description,category,deadline,is_anonymous,status,audit_status,link,create_time,update_time,deleted FROM questionnaire WHERE deleted=0 AND (status = ?) ORDER BY create_time DESC
+==> Parameters: 1(Integer)
+<==    Columns: id, user_id, title, description, category, deadline, is_anonymous, status, audit_status, link, create_time, update_time, deleted
+<==        Row: 15, 3, 888888, <<BLOB>>, 2, null, 1, 1, 0, http://localhost:8080/fill/15, 2025-12-28 16:54:53, 2025-12-28 16:54:53, 0
+<==        Row: 14, 5, 666666666, <<BLOB>>, 1, null, 1, 1, 0, http://localhost:8080/fill/14, 2025-12-28 16:53:11, 2025-12-28 16:53:11, 0
+<==        Row: 13, 5, 3.0测试, <<BLOB>>, 1, null, 1, 1, 0, http://localhost:8080/fill/13, 2025-12-28 15:18:36, 2025-12-28 15:18:36, 0
+<==        Row: 12, 3, 请求, <<BLOB>>, 5, null, 1, 1, 0, http://localhost:8080/fill/12, 2025-12-28 14:10:46, 2025-12-28 14:10:46, 0
+<==        Row: 10, 5, 2.0, <<BLOB>>, 4, null, 1, 1, 0, http://localhost:8080/fill/10, 2025-12-28 13:36:01, 2025-12-28 13:36:01, 0
+<==        Row: 7, 3, 热高热, <<BLOB>>, 3, null, 1, 1, 0, null, 2025-12-28 13:13:20, 2025-12-28 13:13:20, 0
+<==      Total: 6
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@49520d89]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@10a5e872] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,questionnaire_id,content,type,is_required,sort,max_select_num,input_type,create_time,update_time,deleted FROM question WHERE deleted=0 AND (questionnaire_id = ?) ORDER BY sort ASC
+==> Parameters: 15(Long)
+<==    Columns: id, questionnaire_id, content, type, is_required, sort, max_select_num, input_type, create_time, update_time, deleted
+<==        Row: 22, 15, 5555, 0, 0, 1, null, 0, 2025-12-28 16:54:53, 2025-12-28 16:54:53, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@10a5e872]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@295b5e09] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,questionnaire_id,content,type,is_required,sort,max_select_num,input_type,create_time,update_time,deleted FROM question WHERE deleted=0 AND (questionnaire_id = ?) ORDER BY sort ASC
+==> Parameters: 14(Long)
+<==    Columns: id, questionnaire_id, content, type, is_required, sort, max_select_num, input_type, create_time, update_time, deleted
+<==        Row: 21, 14, sadasdcas, 0, 0, 1, null, 0, 2025-12-28 16:53:11, 2025-12-28 16:53:11, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@295b5e09]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@dad9f07] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,questionnaire_id,content,type,is_required,sort,max_select_num,input_type,create_time,update_time,deleted FROM question WHERE deleted=0 AND (questionnaire_id = ?) ORDER BY sort ASC
+==> Parameters: 13(Long)
+<==    Columns: id, questionnaire_id, content, type, is_required, sort, max_select_num, input_type, create_time, update_time, deleted
+<==        Row: 19, 13, 有无闪退, 0, 0, 1, null, 0, 2025-12-28 15:18:36, 2025-12-28 15:18:36, 0
+<==        Row: 20, 13, 喜欢什么美食, 1, 0, 2, null, 0, 2025-12-28 15:18:36, 2025-12-28 15:18:36, 0
+<==      Total: 2
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@dad9f07]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@236737d1] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,questionnaire_id,content,type,is_required,sort,max_select_num,input_type,create_time,update_time,deleted FROM question WHERE deleted=0 AND (questionnaire_id = ?) ORDER BY sort ASC
+==> Parameters: 12(Long)
+<==    Columns: id, questionnaire_id, content, type, is_required, sort, max_select_num, input_type, create_time, update_time, deleted
+<==        Row: 16, 12, 我的期望的, 0, 1, 1, null, 0, 2025-12-28 14:10:46, 2025-12-28 14:10:46, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@236737d1]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@508f8676] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,questionnaire_id,content,type,is_required,sort,max_select_num,input_type,create_time,update_time,deleted FROM question WHERE deleted=0 AND (questionnaire_id = ?) ORDER BY sort ASC
+==> Parameters: 10(Long)
+<==    Columns: id, questionnaire_id, content, type, is_required, sort, max_select_num, input_type, create_time, update_time, deleted
+<==        Row: 14, 10, 违反文案, 1, 0, 1, null, 0, 2025-12-28 13:48:38, 2025-12-28 13:48:38, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@508f8676]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@66d9841b] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,questionnaire_id,content,type,is_required,sort,max_select_num,input_type,create_time,update_time,deleted FROM question WHERE deleted=0 AND (questionnaire_id = ?) ORDER BY sort ASC
+==> Parameters: 7(Long)
+<==    Columns: id, questionnaire_id, content, type, is_required, sort, max_select_num, input_type, create_time, update_time, deleted
+<==        Row: 17, 7, 人格啊, 0, 1, 1, null, 0, 2025-12-28 14:51:45, 2025-12-28 14:51:45, 0
+<==        Row: 18, 7, 太挨个, 1, 1, 2, null, 0, 2025-12-28 14:51:45, 2025-12-28 14:51:45, 0
+<==      Total: 2
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@66d9841b]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@c13cff9] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,user_id,title,description,category,deadline,is_anonymous,status,audit_status,link,create_time,update_time,deleted FROM questionnaire WHERE deleted=0 AND (status = ?) ORDER BY create_time DESC
+==> Parameters: 1(Integer)
+<==    Columns: id, user_id, title, description, category, deadline, is_anonymous, status, audit_status, link, create_time, update_time, deleted
+<==        Row: 15, 3, 888888, <<BLOB>>, 2, null, 1, 1, 0, http://localhost:8080/fill/15, 2025-12-28 16:54:53, 2025-12-28 16:54:53, 0
+<==        Row: 14, 5, 666666666, <<BLOB>>, 1, null, 1, 1, 0, http://localhost:8080/fill/14, 2025-12-28 16:53:11, 2025-12-28 16:53:11, 0
+<==        Row: 13, 5, 3.0测试, <<BLOB>>, 1, null, 1, 1, 0, http://localhost:8080/fill/13, 2025-12-28 15:18:36, 2025-12-28 15:18:36, 0
+<==        Row: 12, 3, 请求, <<BLOB>>, 5, null, 1, 1, 0, http://localhost:8080/fill/12, 2025-12-28 14:10:46, 2025-12-28 14:10:46, 0
+<==        Row: 10, 5, 2.0, <<BLOB>>, 4, null, 1, 1, 0, http://localhost:8080/fill/10, 2025-12-28 13:36:01, 2025-12-28 13:36:01, 0
+<==        Row: 7, 3, 热高热, <<BLOB>>, 3, null, 1, 1, 0, null, 2025-12-28 13:13:20, 2025-12-28 13:13:20, 0
+<==      Total: 6
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@c13cff9]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@12b46fbd] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,questionnaire_id,content,type,is_required,sort,max_select_num,input_type,create_time,update_time,deleted FROM question WHERE deleted=0 AND (questionnaire_id = ?) ORDER BY sort ASC
+==> Parameters: 15(Long)
+<==    Columns: id, questionnaire_id, content, type, is_required, sort, max_select_num, input_type, create_time, update_time, deleted
+<==        Row: 22, 15, 5555, 0, 0, 1, null, 0, 2025-12-28 16:54:53, 2025-12-28 16:54:53, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@12b46fbd]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a388a5] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,questionnaire_id,content,type,is_required,sort,max_select_num,input_type,create_time,update_time,deleted FROM question WHERE deleted=0 AND (questionnaire_id = ?) ORDER BY sort ASC
+==> Parameters: 14(Long)
+<==    Columns: id, questionnaire_id, content, type, is_required, sort, max_select_num, input_type, create_time, update_time, deleted
+<==        Row: 21, 14, sadasdcas, 0, 0, 1, null, 0, 2025-12-28 16:53:11, 2025-12-28 16:53:11, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a388a5]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7e078772] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,questionnaire_id,content,type,is_required,sort,max_select_num,input_type,create_time,update_time,deleted FROM question WHERE deleted=0 AND (questionnaire_id = ?) ORDER BY sort ASC
+==> Parameters: 13(Long)
+<==    Columns: id, questionnaire_id, content, type, is_required, sort, max_select_num, input_type, create_time, update_time, deleted
+<==        Row: 19, 13, 有无闪退, 0, 0, 1, null, 0, 2025-12-28 15:18:36, 2025-12-28 15:18:36, 0
+<==        Row: 20, 13, 喜欢什么美食, 1, 0, 2, null, 0, 2025-12-28 15:18:36, 2025-12-28 15:18:36, 0
+<==      Total: 2
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7e078772]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@31549fd9] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,questionnaire_id,content,type,is_required,sort,max_select_num,input_type,create_time,update_time,deleted FROM question WHERE deleted=0 AND (questionnaire_id = ?) ORDER BY sort ASC
+==> Parameters: 12(Long)
+<==    Columns: id, questionnaire_id, content, type, is_required, sort, max_select_num, input_type, create_time, update_time, deleted
+<==        Row: 16, 12, 我的期望的, 0, 1, 1, null, 0, 2025-12-28 14:10:46, 2025-12-28 14:10:46, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@31549fd9]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@426120da] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,questionnaire_id,content,type,is_required,sort,max_select_num,input_type,create_time,update_time,deleted FROM question WHERE deleted=0 AND (questionnaire_id = ?) ORDER BY sort ASC
+==> Parameters: 10(Long)
+<==    Columns: id, questionnaire_id, content, type, is_required, sort, max_select_num, input_type, create_time, update_time, deleted
+<==        Row: 14, 10, 违反文案, 1, 0, 1, null, 0, 2025-12-28 13:48:38, 2025-12-28 13:48:38, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@426120da]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@17d38cd8] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,questionnaire_id,content,type,is_required,sort,max_select_num,input_type,create_time,update_time,deleted FROM question WHERE deleted=0 AND (questionnaire_id = ?) ORDER BY sort ASC
+==> Parameters: 7(Long)
+<==    Columns: id, questionnaire_id, content, type, is_required, sort, max_select_num, input_type, create_time, update_time, deleted
+<==        Row: 17, 7, 人格啊, 0, 1, 1, null, 0, 2025-12-28 14:51:45, 2025-12-28 14:51:45, 0
+<==        Row: 18, 7, 太挨个, 1, 1, 2, null, 0, 2025-12-28 14:51:45, 2025-12-28 14:51:45, 0
+<==      Total: 2
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@17d38cd8]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@f430082] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,username,password,phone,email,nickname,role,points,create_time,update_time,deleted FROM sys_user WHERE deleted=0 AND (phone = ? OR username = ?)
+==> Parameters: 17836900831(String), 17836900831(String)
+<==    Columns: id, username, password, phone, email, nickname, role, points, create_time, update_time, deleted
+<==        Row: 1, 17836900831, 85bf5831e593431e882887e077400b7f, 17836900831, null, 系统管理员, 1, 0, 2025-12-28 00:39:09, 2025-12-28 18:30:58, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@f430082]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@49c84c80] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,user_id,title,description,category,deadline,is_anonymous,status,audit_status,link,create_time,update_time,deleted FROM questionnaire WHERE deleted=0 AND (status = ?) ORDER BY create_time DESC
+==> Parameters: 1(Integer)
+<==    Columns: id, user_id, title, description, category, deadline, is_anonymous, status, audit_status, link, create_time, update_time, deleted
+<==        Row: 15, 3, 888888, <<BLOB>>, 2, null, 1, 1, 0, http://localhost:8080/fill/15, 2025-12-28 16:54:53, 2025-12-28 16:54:53, 0
+<==        Row: 14, 5, 666666666, <<BLOB>>, 1, null, 1, 1, 0, http://localhost:8080/fill/14, 2025-12-28 16:53:11, 2025-12-28 16:53:11, 0
+<==        Row: 13, 5, 3.0测试, <<BLOB>>, 1, null, 1, 1, 0, http://localhost:8080/fill/13, 2025-12-28 15:18:36, 2025-12-28 15:18:36, 0
+<==        Row: 12, 3, 请求, <<BLOB>>, 5, null, 1, 1, 0, http://localhost:8080/fill/12, 2025-12-28 14:10:46, 2025-12-28 14:10:46, 0
+<==        Row: 10, 5, 2.0, <<BLOB>>, 4, null, 1, 1, 0, http://localhost:8080/fill/10, 2025-12-28 13:36:01, 2025-12-28 13:36:01, 0
+<==        Row: 7, 3, 热高热, <<BLOB>>, 3, null, 1, 1, 0, null, 2025-12-28 13:13:20, 2025-12-28 13:13:20, 0
+<==      Total: 6
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@49c84c80]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3814aa44] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,questionnaire_id,content,type,is_required,sort,max_select_num,input_type,create_time,update_time,deleted FROM question WHERE deleted=0 AND (questionnaire_id = ?) ORDER BY sort ASC
+==> Parameters: 15(Long)
+<==    Columns: id, questionnaire_id, content, type, is_required, sort, max_select_num, input_type, create_time, update_time, deleted
+<==        Row: 22, 15, 5555, 0, 0, 1, null, 0, 2025-12-28 16:54:53, 2025-12-28 16:54:53, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3814aa44]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@89a9f0c] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,questionnaire_id,content,type,is_required,sort,max_select_num,input_type,create_time,update_time,deleted FROM question WHERE deleted=0 AND (questionnaire_id = ?) ORDER BY sort ASC
+==> Parameters: 14(Long)
+<==    Columns: id, questionnaire_id, content, type, is_required, sort, max_select_num, input_type, create_time, update_time, deleted
+<==        Row: 21, 14, sadasdcas, 0, 0, 1, null, 0, 2025-12-28 16:53:11, 2025-12-28 16:53:11, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@89a9f0c]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1ef1ccbb] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,questionnaire_id,content,type,is_required,sort,max_select_num,input_type,create_time,update_time,deleted FROM question WHERE deleted=0 AND (questionnaire_id = ?) ORDER BY sort ASC
+==> Parameters: 13(Long)
+<==    Columns: id, questionnaire_id, content, type, is_required, sort, max_select_num, input_type, create_time, update_time, deleted
+<==        Row: 19, 13, 有无闪退, 0, 0, 1, null, 0, 2025-12-28 15:18:36, 2025-12-28 15:18:36, 0
+<==        Row: 20, 13, 喜欢什么美食, 1, 0, 2, null, 0, 2025-12-28 15:18:36, 2025-12-28 15:18:36, 0
+<==      Total: 2
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1ef1ccbb]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2ae74b3d] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,questionnaire_id,content,type,is_required,sort,max_select_num,input_type,create_time,update_time,deleted FROM question WHERE deleted=0 AND (questionnaire_id = ?) ORDER BY sort ASC
+==> Parameters: 12(Long)
+<==    Columns: id, questionnaire_id, content, type, is_required, sort, max_select_num, input_type, create_time, update_time, deleted
+<==        Row: 16, 12, 我的期望的, 0, 1, 1, null, 0, 2025-12-28 14:10:46, 2025-12-28 14:10:46, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2ae74b3d]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@691a6bed] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,questionnaire_id,content,type,is_required,sort,max_select_num,input_type,create_time,update_time,deleted FROM question WHERE deleted=0 AND (questionnaire_id = ?) ORDER BY sort ASC
+==> Parameters: 10(Long)
+<==    Columns: id, questionnaire_id, content, type, is_required, sort, max_select_num, input_type, create_time, update_time, deleted
+<==        Row: 14, 10, 违反文案, 1, 0, 1, null, 0, 2025-12-28 13:48:38, 2025-12-28 13:48:38, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@691a6bed]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@41150882] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,questionnaire_id,content,type,is_required,sort,max_select_num,input_type,create_time,update_time,deleted FROM question WHERE deleted=0 AND (questionnaire_id = ?) ORDER BY sort ASC
+==> Parameters: 7(Long)
+<==    Columns: id, questionnaire_id, content, type, is_required, sort, max_select_num, input_type, create_time, update_time, deleted
+<==        Row: 17, 7, 人格啊, 0, 1, 1, null, 0, 2025-12-28 14:51:45, 2025-12-28 14:51:45, 0
+<==        Row: 18, 7, 太挨个, 1, 1, 2, null, 0, 2025-12-28 14:51:45, 2025-12-28 14:51:45, 0
+<==      Total: 2
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@41150882]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@10a46e48] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT q.id, q.user_id, q.title, q.description, q.category, q.deadline, q.is_anonymous, q.status, q.audit_status, q.link, q.create_time, (SELECT COUNT(*) FROM question qu WHERE qu.questionnaire_id = q.id AND qu.deleted = 0) as question_count, (SELECT COUNT(*) FROM answer a WHERE a.questionnaire_id = q.id AND a.deleted = 0) as answer_count FROM questionnaire q WHERE q.deleted = 0 AND q.user_id = ? ORDER BY q.create_time DESC
+==> Parameters: 1(Long)
+<==      Total: 0
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@10a46e48]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2223fc98] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT q.id, q.user_id, q.title, q.description, q.category, q.deadline, q.is_anonymous, q.status, q.audit_status, q.link, q.create_time, (SELECT COUNT(*) FROM question qu WHERE qu.questionnaire_id = q.id AND qu.deleted = 0) as question_count, (SELECT COUNT(*) FROM answer a WHERE a.questionnaire_id = q.id AND a.deleted = 0) as answer_count FROM questionnaire q WHERE q.deleted = 0 AND q.user_id = ? ORDER BY q.create_time DESC
+==> Parameters: 1(Long)
+<==      Total: 0
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2223fc98]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3013f66d] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,questionnaire_id,respondent_name,respondent_phone,respondent_ip,user_id,create_time,update_time,deleted FROM answer WHERE deleted=0 AND (user_id = ?) ORDER BY create_time DESC
+==> Parameters: 1(Long)
+<==      Total: 0
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3013f66d]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2445ad32] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,user_id,title,description,category,deadline,is_anonymous,status,audit_status,link,create_time,update_time,deleted FROM questionnaire WHERE deleted=0 AND (status = ?) ORDER BY create_time DESC
+==> Parameters: 1(Integer)
+<==    Columns: id, user_id, title, description, category, deadline, is_anonymous, status, audit_status, link, create_time, update_time, deleted
+<==        Row: 15, 3, 888888, <<BLOB>>, 2, null, 1, 1, 0, http://localhost:8080/fill/15, 2025-12-28 16:54:53, 2025-12-28 16:54:53, 0
+<==        Row: 14, 5, 666666666, <<BLOB>>, 1, null, 1, 1, 0, http://localhost:8080/fill/14, 2025-12-28 16:53:11, 2025-12-28 16:53:11, 0
+<==        Row: 13, 5, 3.0测试, <<BLOB>>, 1, null, 1, 1, 0, http://localhost:8080/fill/13, 2025-12-28 15:18:36, 2025-12-28 15:18:36, 0
+<==        Row: 12, 3, 请求, <<BLOB>>, 5, null, 1, 1, 0, http://localhost:8080/fill/12, 2025-12-28 14:10:46, 2025-12-28 14:10:46, 0
+<==        Row: 10, 5, 2.0, <<BLOB>>, 4, null, 1, 1, 0, http://localhost:8080/fill/10, 2025-12-28 13:36:01, 2025-12-28 13:36:01, 0
+<==        Row: 7, 3, 热高热, <<BLOB>>, 3, null, 1, 1, 0, null, 2025-12-28 13:13:20, 2025-12-28 13:13:20, 0
+<==      Total: 6
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2445ad32]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4efe1524] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,questionnaire_id,content,type,is_required,sort,max_select_num,input_type,create_time,update_time,deleted FROM question WHERE deleted=0 AND (questionnaire_id = ?) ORDER BY sort ASC
+==> Parameters: 15(Long)
+<==    Columns: id, questionnaire_id, content, type, is_required, sort, max_select_num, input_type, create_time, update_time, deleted
+<==        Row: 22, 15, 5555, 0, 0, 1, null, 0, 2025-12-28 16:54:53, 2025-12-28 16:54:53, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4efe1524]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@61abc90f] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,questionnaire_id,content,type,is_required,sort,max_select_num,input_type,create_time,update_time,deleted FROM question WHERE deleted=0 AND (questionnaire_id = ?) ORDER BY sort ASC
+==> Parameters: 14(Long)
+<==    Columns: id, questionnaire_id, content, type, is_required, sort, max_select_num, input_type, create_time, update_time, deleted
+<==        Row: 21, 14, sadasdcas, 0, 0, 1, null, 0, 2025-12-28 16:53:11, 2025-12-28 16:53:11, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@61abc90f]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1d60e7e6] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,questionnaire_id,content,type,is_required,sort,max_select_num,input_type,create_time,update_time,deleted FROM question WHERE deleted=0 AND (questionnaire_id = ?) ORDER BY sort ASC
+==> Parameters: 13(Long)
+<==    Columns: id, questionnaire_id, content, type, is_required, sort, max_select_num, input_type, create_time, update_time, deleted
+<==        Row: 19, 13, 有无闪退, 0, 0, 1, null, 0, 2025-12-28 15:18:36, 2025-12-28 15:18:36, 0
+<==        Row: 20, 13, 喜欢什么美食, 1, 0, 2, null, 0, 2025-12-28 15:18:36, 2025-12-28 15:18:36, 0
+<==      Total: 2
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1d60e7e6]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3c84cdd3] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,questionnaire_id,content,type,is_required,sort,max_select_num,input_type,create_time,update_time,deleted FROM question WHERE deleted=0 AND (questionnaire_id = ?) ORDER BY sort ASC
+==> Parameters: 12(Long)
+<==    Columns: id, questionnaire_id, content, type, is_required, sort, max_select_num, input_type, create_time, update_time, deleted
+<==        Row: 16, 12, 我的期望的, 0, 1, 1, null, 0, 2025-12-28 14:10:46, 2025-12-28 14:10:46, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3c84cdd3]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@49ab7ca8] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,questionnaire_id,content,type,is_required,sort,max_select_num,input_type,create_time,update_time,deleted FROM question WHERE deleted=0 AND (questionnaire_id = ?) ORDER BY sort ASC
+==> Parameters: 10(Long)
+<==    Columns: id, questionnaire_id, content, type, is_required, sort, max_select_num, input_type, create_time, update_time, deleted
+<==        Row: 14, 10, 违反文案, 1, 0, 1, null, 0, 2025-12-28 13:48:38, 2025-12-28 13:48:38, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@49ab7ca8]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@143cd46b] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,questionnaire_id,content,type,is_required,sort,max_select_num,input_type,create_time,update_time,deleted FROM question WHERE deleted=0 AND (questionnaire_id = ?) ORDER BY sort ASC
+==> Parameters: 7(Long)
+<==    Columns: id, questionnaire_id, content, type, is_required, sort, max_select_num, input_type, create_time, update_time, deleted
+<==        Row: 17, 7, 人格啊, 0, 1, 1, null, 0, 2025-12-28 14:51:45, 2025-12-28 14:51:45, 0
+<==        Row: 18, 7, 太挨个, 1, 1, 2, null, 0, 2025-12-28 14:51:45, 2025-12-28 14:51:45, 0
+<==      Total: 2
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@143cd46b]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3d9c69e8] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,user_id,title,description,category,deadline,is_anonymous,status,audit_status,link,create_time,update_time,deleted FROM questionnaire WHERE id=? AND deleted=0
+==> Parameters: 15(Long)
+<==    Columns: id, user_id, title, description, category, deadline, is_anonymous, status, audit_status, link, create_time, update_time, deleted
+<==        Row: 15, 3, 888888, <<BLOB>>, 2, null, 1, 1, 0, http://localhost:8080/fill/15, 2025-12-28 16:54:53, 2025-12-28 16:54:53, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3d9c69e8]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1508a3e2] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,questionnaire_id,content,type,is_required,sort,max_select_num,input_type,create_time,update_time,deleted FROM question WHERE deleted=0 AND (questionnaire_id = ?) ORDER BY sort ASC
+==> Parameters: 15(Long)
+<==    Columns: id, questionnaire_id, content, type, is_required, sort, max_select_num, input_type, create_time, update_time, deleted
+<==        Row: 22, 15, 5555, 0, 0, 1, null, 0, 2025-12-28 16:54:53, 2025-12-28 16:54:53, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1508a3e2]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3f0d7f85] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,question_id,content,sort,jump_question_id,create_time,update_time,deleted FROM question_option WHERE deleted=0 AND (question_id = ?) ORDER BY sort ASC
+==> Parameters: 22(Long)
+<==    Columns: id, question_id, content, sort, jump_question_id, create_time, update_time, deleted
+<==        Row: 50, 22, 222, 1, null, 2025-12-28 16:54:53, 2025-12-28 16:54:53, 0
+<==        Row: 51, 22, 333, 2, null, 2025-12-28 16:54:53, 2025-12-28 16:54:53, 0
+<==      Total: 2
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3f0d7f85]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@15cd5825] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT q.id, q.user_id, q.title, q.description, q.category, q.deadline, q.is_anonymous, q.status, q.audit_status, q.link, q.create_time, (SELECT COUNT(*) FROM question qu WHERE qu.questionnaire_id = q.id AND qu.deleted = 0) as question_count, (SELECT COUNT(*) FROM answer a WHERE a.questionnaire_id = q.id AND a.deleted = 0) as answer_count FROM questionnaire q WHERE q.deleted = 0 AND q.user_id = ? ORDER BY q.create_time DESC
+==> Parameters: 1(Long)
+<==      Total: 0
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@15cd5825]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@834328d] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT q.id, q.user_id, q.title, q.description, q.category, q.deadline, q.is_anonymous, q.status, q.audit_status, q.link, q.create_time, (SELECT COUNT(*) FROM question qu WHERE qu.questionnaire_id = q.id AND qu.deleted = 0) as question_count, (SELECT COUNT(*) FROM answer a WHERE a.questionnaire_id = q.id AND a.deleted = 0) as answer_count FROM questionnaire q WHERE q.deleted = 0 AND q.user_id = ? ORDER BY q.create_time DESC
+==> Parameters: 1(Long)
+<==      Total: 0
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@834328d]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2b899bb5] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,user_id,title,description,category,deadline,is_anonymous,status,audit_status,link,create_time,update_time,deleted FROM questionnaire WHERE deleted=0 AND (status = ?) ORDER BY create_time DESC
+==> Parameters: 1(Integer)
+<==    Columns: id, user_id, title, description, category, deadline, is_anonymous, status, audit_status, link, create_time, update_time, deleted
+<==        Row: 15, 3, 888888, <<BLOB>>, 2, null, 1, 1, 0, http://localhost:8080/fill/15, 2025-12-28 16:54:53, 2025-12-28 16:54:53, 0
+<==        Row: 14, 5, 666666666, <<BLOB>>, 1, null, 1, 1, 0, http://localhost:8080/fill/14, 2025-12-28 16:53:11, 2025-12-28 16:53:11, 0
+<==        Row: 13, 5, 3.0测试, <<BLOB>>, 1, null, 1, 1, 0, http://localhost:8080/fill/13, 2025-12-28 15:18:36, 2025-12-28 15:18:36, 0
+<==        Row: 12, 3, 请求, <<BLOB>>, 5, null, 1, 1, 0, http://localhost:8080/fill/12, 2025-12-28 14:10:46, 2025-12-28 14:10:46, 0
+<==        Row: 10, 5, 2.0, <<BLOB>>, 4, null, 1, 1, 0, http://localhost:8080/fill/10, 2025-12-28 13:36:01, 2025-12-28 13:36:01, 0
+<==        Row: 7, 3, 热高热, <<BLOB>>, 3, null, 1, 1, 0, null, 2025-12-28 13:13:20, 2025-12-28 13:13:20, 0
+<==      Total: 6
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2b899bb5]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@77c62931] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,questionnaire_id,content,type,is_required,sort,max_select_num,input_type,create_time,update_time,deleted FROM question WHERE deleted=0 AND (questionnaire_id = ?) ORDER BY sort ASC
+==> Parameters: 15(Long)
+<==    Columns: id, questionnaire_id, content, type, is_required, sort, max_select_num, input_type, create_time, update_time, deleted
+<==        Row: 22, 15, 5555, 0, 0, 1, null, 0, 2025-12-28 16:54:53, 2025-12-28 16:54:53, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@77c62931]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@537c07b4] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,questionnaire_id,content,type,is_required,sort,max_select_num,input_type,create_time,update_time,deleted FROM question WHERE deleted=0 AND (questionnaire_id = ?) ORDER BY sort ASC
+==> Parameters: 14(Long)
+<==    Columns: id, questionnaire_id, content, type, is_required, sort, max_select_num, input_type, create_time, update_time, deleted
+<==        Row: 21, 14, sadasdcas, 0, 0, 1, null, 0, 2025-12-28 16:53:11, 2025-12-28 16:53:11, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@537c07b4]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4f028e60] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,questionnaire_id,content,type,is_required,sort,max_select_num,input_type,create_time,update_time,deleted FROM question WHERE deleted=0 AND (questionnaire_id = ?) ORDER BY sort ASC
+==> Parameters: 13(Long)
+<==    Columns: id, questionnaire_id, content, type, is_required, sort, max_select_num, input_type, create_time, update_time, deleted
+<==        Row: 19, 13, 有无闪退, 0, 0, 1, null, 0, 2025-12-28 15:18:36, 2025-12-28 15:18:36, 0
+<==        Row: 20, 13, 喜欢什么美食, 1, 0, 2, null, 0, 2025-12-28 15:18:36, 2025-12-28 15:18:36, 0
+<==      Total: 2
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4f028e60]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@33452580] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,questionnaire_id,content,type,is_required,sort,max_select_num,input_type,create_time,update_time,deleted FROM question WHERE deleted=0 AND (questionnaire_id = ?) ORDER BY sort ASC
+==> Parameters: 12(Long)
+<==    Columns: id, questionnaire_id, content, type, is_required, sort, max_select_num, input_type, create_time, update_time, deleted
+<==        Row: 16, 12, 我的期望的, 0, 1, 1, null, 0, 2025-12-28 14:10:46, 2025-12-28 14:10:46, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@33452580]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3c7e7c4c] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,questionnaire_id,content,type,is_required,sort,max_select_num,input_type,create_time,update_time,deleted FROM question WHERE deleted=0 AND (questionnaire_id = ?) ORDER BY sort ASC
+==> Parameters: 10(Long)
+<==    Columns: id, questionnaire_id, content, type, is_required, sort, max_select_num, input_type, create_time, update_time, deleted
+<==        Row: 14, 10, 违反文案, 1, 0, 1, null, 0, 2025-12-28 13:48:38, 2025-12-28 13:48:38, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3c7e7c4c]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1818e7d5] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,questionnaire_id,content,type,is_required,sort,max_select_num,input_type,create_time,update_time,deleted FROM question WHERE deleted=0 AND (questionnaire_id = ?) ORDER BY sort ASC
+==> Parameters: 7(Long)
+<==    Columns: id, questionnaire_id, content, type, is_required, sort, max_select_num, input_type, create_time, update_time, deleted
+<==        Row: 17, 7, 人格啊, 0, 1, 1, null, 0, 2025-12-28 14:51:45, 2025-12-28 14:51:45, 0
+<==        Row: 18, 7, 太挨个, 1, 1, 2, null, 0, 2025-12-28 14:51:45, 2025-12-28 14:51:45, 0
+<==      Total: 2
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1818e7d5]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@329ded27] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT q.id, q.user_id, q.title, q.description, q.category, q.deadline, q.is_anonymous, q.status, q.audit_status, q.link, q.create_time, (SELECT COUNT(*) FROM question qu WHERE qu.questionnaire_id = q.id AND qu.deleted = 0) as question_count, (SELECT COUNT(*) FROM answer a WHERE a.questionnaire_id = q.id AND a.deleted = 0) as answer_count FROM questionnaire q WHERE q.deleted = 0 AND q.user_id = ? ORDER BY q.create_time DESC
+==> Parameters: 1(Long)
+<==      Total: 0
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@329ded27]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2849503] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT q.id, q.user_id, q.title, q.description, q.category, q.deadline, q.is_anonymous, q.status, q.audit_status, q.link, q.create_time, (SELECT COUNT(*) FROM question qu WHERE qu.questionnaire_id = q.id AND qu.deleted = 0) as question_count, (SELECT COUNT(*) FROM answer a WHERE a.questionnaire_id = q.id AND a.deleted = 0) as answer_count FROM questionnaire q WHERE q.deleted = 0 AND q.user_id = ? ORDER BY q.create_time DESC
+==> Parameters: 1(Long)
+<==      Total: 0
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2849503]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@225d6542] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,username,password,phone,email,nickname,role,points,create_time,update_time,deleted FROM sys_user WHERE deleted=0 AND (phone = ? OR username = ?)
+==> Parameters: 19816301418(String), 19816301418(String)
+<==    Columns: id, username, password, phone, email, nickname, role, points, create_time, update_time, deleted
+<==        Row: 3, Raze, 9a8ba6837da0dd7acb9552017c1a6777, 19816301418, 2681907860@qq.com, null, 0, 0, 2025-12-28 01:01:44, 2025-12-28 01:01:44, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@225d6542]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@71ca7e68] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,user_id,title,description,category,deadline,is_anonymous,status,audit_status,link,create_time,update_time,deleted FROM questionnaire WHERE deleted=0 AND (status = ?) ORDER BY create_time DESC
+==> Parameters: 1(Integer)
+<==    Columns: id, user_id, title, description, category, deadline, is_anonymous, status, audit_status, link, create_time, update_time, deleted
+<==        Row: 15, 3, 888888, <<BLOB>>, 2, null, 1, 1, 0, http://localhost:8080/fill/15, 2025-12-28 16:54:53, 2025-12-28 16:54:53, 0
+<==        Row: 14, 5, 666666666, <<BLOB>>, 1, null, 1, 1, 0, http://localhost:8080/fill/14, 2025-12-28 16:53:11, 2025-12-28 16:53:11, 0
+<==        Row: 13, 5, 3.0测试, <<BLOB>>, 1, null, 1, 1, 0, http://localhost:8080/fill/13, 2025-12-28 15:18:36, 2025-12-28 15:18:36, 0
+<==        Row: 12, 3, 请求, <<BLOB>>, 5, null, 1, 1, 0, http://localhost:8080/fill/12, 2025-12-28 14:10:46, 2025-12-28 14:10:46, 0
+<==        Row: 10, 5, 2.0, <<BLOB>>, 4, null, 1, 1, 0, http://localhost:8080/fill/10, 2025-12-28 13:36:01, 2025-12-28 13:36:01, 0
+<==        Row: 7, 3, 热高热, <<BLOB>>, 3, null, 1, 1, 0, null, 2025-12-28 13:13:20, 2025-12-28 13:13:20, 0
+<==      Total: 6
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@71ca7e68]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@54cfa8db] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,questionnaire_id,content,type,is_required,sort,max_select_num,input_type,create_time,update_time,deleted FROM question WHERE deleted=0 AND (questionnaire_id = ?) ORDER BY sort ASC
+==> Parameters: 15(Long)
+<==    Columns: id, questionnaire_id, content, type, is_required, sort, max_select_num, input_type, create_time, update_time, deleted
+<==        Row: 22, 15, 5555, 0, 0, 1, null, 0, 2025-12-28 16:54:53, 2025-12-28 16:54:53, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@54cfa8db]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3bcb3700] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,questionnaire_id,content,type,is_required,sort,max_select_num,input_type,create_time,update_time,deleted FROM question WHERE deleted=0 AND (questionnaire_id = ?) ORDER BY sort ASC
+==> Parameters: 14(Long)
+<==    Columns: id, questionnaire_id, content, type, is_required, sort, max_select_num, input_type, create_time, update_time, deleted
+<==        Row: 21, 14, sadasdcas, 0, 0, 1, null, 0, 2025-12-28 16:53:11, 2025-12-28 16:53:11, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3bcb3700]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@13aed9b1] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,questionnaire_id,content,type,is_required,sort,max_select_num,input_type,create_time,update_time,deleted FROM question WHERE deleted=0 AND (questionnaire_id = ?) ORDER BY sort ASC
+==> Parameters: 13(Long)
+<==    Columns: id, questionnaire_id, content, type, is_required, sort, max_select_num, input_type, create_time, update_time, deleted
+<==        Row: 19, 13, 有无闪退, 0, 0, 1, null, 0, 2025-12-28 15:18:36, 2025-12-28 15:18:36, 0
+<==        Row: 20, 13, 喜欢什么美食, 1, 0, 2, null, 0, 2025-12-28 15:18:36, 2025-12-28 15:18:36, 0
+<==      Total: 2
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@13aed9b1]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@69ec1633] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,questionnaire_id,content,type,is_required,sort,max_select_num,input_type,create_time,update_time,deleted FROM question WHERE deleted=0 AND (questionnaire_id = ?) ORDER BY sort ASC
+==> Parameters: 12(Long)
+<==    Columns: id, questionnaire_id, content, type, is_required, sort, max_select_num, input_type, create_time, update_time, deleted
+<==        Row: 16, 12, 我的期望的, 0, 1, 1, null, 0, 2025-12-28 14:10:46, 2025-12-28 14:10:46, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@69ec1633]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4795e698] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,questionnaire_id,content,type,is_required,sort,max_select_num,input_type,create_time,update_time,deleted FROM question WHERE deleted=0 AND (questionnaire_id = ?) ORDER BY sort ASC
+==> Parameters: 10(Long)
+<==    Columns: id, questionnaire_id, content, type, is_required, sort, max_select_num, input_type, create_time, update_time, deleted
+<==        Row: 14, 10, 违反文案, 1, 0, 1, null, 0, 2025-12-28 13:48:38, 2025-12-28 13:48:38, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4795e698]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2fc644f5] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,questionnaire_id,content,type,is_required,sort,max_select_num,input_type,create_time,update_time,deleted FROM question WHERE deleted=0 AND (questionnaire_id = ?) ORDER BY sort ASC
+==> Parameters: 7(Long)
+<==    Columns: id, questionnaire_id, content, type, is_required, sort, max_select_num, input_type, create_time, update_time, deleted
+<==        Row: 17, 7, 人格啊, 0, 1, 1, null, 0, 2025-12-28 14:51:45, 2025-12-28 14:51:45, 0
+<==        Row: 18, 7, 太挨个, 1, 1, 2, null, 0, 2025-12-28 14:51:45, 2025-12-28 14:51:45, 0
+<==      Total: 2
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2fc644f5]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6fce7105] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT q.id, q.user_id, q.title, q.description, q.category, q.deadline, q.is_anonymous, q.status, q.audit_status, q.link, q.create_time, (SELECT COUNT(*) FROM question qu WHERE qu.questionnaire_id = q.id AND qu.deleted = 0) as question_count, (SELECT COUNT(*) FROM answer a WHERE a.questionnaire_id = q.id AND a.deleted = 0) as answer_count FROM questionnaire q WHERE q.deleted = 0 AND q.user_id = ? ORDER BY q.create_time DESC
+==> Parameters: 3(Long)
+<==    Columns: id, user_id, title, description, category, deadline, is_anonymous, status, audit_status, link, create_time, question_count, answer_count
+<==        Row: 15, 3, 888888, <<BLOB>>, 2, null, 1, 1, 0, http://localhost:8080/fill/15, 2025-12-28 16:54:53, 1, 1
+<==        Row: 12, 3, 请求, <<BLOB>>, 5, null, 1, 1, 0, http://localhost:8080/fill/12, 2025-12-28 14:10:46, 1, 0
+<==        Row: 11, 3, 请求, <<BLOB>>, 5, null, 1, 0, 0, null, 2025-12-28 14:10:43, 1, 0
+<==        Row: 8, 3, 方法, <<BLOB>>, 4, null, 1, 0, 0, null, 2025-12-28 13:26:07, 1, 0
+<==        Row: 7, 3, 热高热, <<BLOB>>, 3, null, 1, 1, 0, null, 2025-12-28 13:13:20, 2, 1
+<==      Total: 5
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6fce7105]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@69fe3be3] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,questionnaire_id,content,type,is_required,sort,max_select_num,input_type,create_time,update_time,deleted FROM question WHERE deleted=0 AND (questionnaire_id = ?) ORDER BY sort ASC
+==> Parameters: 15(Long)
+<==    Columns: id, questionnaire_id, content, type, is_required, sort, max_select_num, input_type, create_time, update_time, deleted
+<==        Row: 22, 15, 5555, 0, 0, 1, null, 0, 2025-12-28 16:54:53, 2025-12-28 16:54:53, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@69fe3be3]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7fc41ad9] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,question_id,content,sort,jump_question_id,create_time,update_time,deleted FROM question_option WHERE deleted=0 AND (question_id = ?) ORDER BY sort ASC
+==> Parameters: 22(Long)
+<==    Columns: id, question_id, content, sort, jump_question_id, create_time, update_time, deleted
+<==        Row: 50, 22, 222, 1, null, 2025-12-28 16:54:53, 2025-12-28 16:54:53, 0
+<==        Row: 51, 22, 333, 2, null, 2025-12-28 16:54:53, 2025-12-28 16:54:53, 0
+<==      Total: 2
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7fc41ad9]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@395fdba7] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,questionnaire_id,content,type,is_required,sort,max_select_num,input_type,create_time,update_time,deleted FROM question WHERE deleted=0 AND (questionnaire_id = ?) ORDER BY sort ASC
+==> Parameters: 12(Long)
+<==    Columns: id, questionnaire_id, content, type, is_required, sort, max_select_num, input_type, create_time, update_time, deleted
+<==        Row: 16, 12, 我的期望的, 0, 1, 1, null, 0, 2025-12-28 14:10:46, 2025-12-28 14:10:46, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@395fdba7]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7550610b] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,question_id,content,sort,jump_question_id,create_time,update_time,deleted FROM question_option WHERE deleted=0 AND (question_id = ?) ORDER BY sort ASC
+==> Parameters: 16(Long)
+<==    Columns: id, question_id, content, sort, jump_question_id, create_time, update_time, deleted
+<==        Row: 33, 16, 啊我去打网球的, 1, null, 2025-12-28 14:10:46, 2025-12-28 14:10:46, 0
+<==        Row: 34, 16, 我等我期待, 2, null, 2025-12-28 14:10:46, 2025-12-28 14:10:46, 0
+<==        Row: 35, 16, 请问我等我期待, 3, null, 2025-12-28 14:10:46, 2025-12-28 14:10:46, 0
+<==      Total: 3
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7550610b]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@258e0b72] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,questionnaire_id,content,type,is_required,sort,max_select_num,input_type,create_time,update_time,deleted FROM question WHERE deleted=0 AND (questionnaire_id = ?) ORDER BY sort ASC
+==> Parameters: 11(Long)
+<==    Columns: id, questionnaire_id, content, type, is_required, sort, max_select_num, input_type, create_time, update_time, deleted
+<==        Row: 15, 11, 我的期望的, 0, 1, 1, null, 0, 2025-12-28 14:10:43, 2025-12-28 14:10:43, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@258e0b72]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@145871d0] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,question_id,content,sort,jump_question_id,create_time,update_time,deleted FROM question_option WHERE deleted=0 AND (question_id = ?) ORDER BY sort ASC
+==> Parameters: 15(Long)
+<==    Columns: id, question_id, content, sort, jump_question_id, create_time, update_time, deleted
+<==        Row: 30, 15, 啊我去打网球的, 1, null, 2025-12-28 14:10:43, 2025-12-28 14:10:43, 0
+<==        Row: 31, 15, 我等我期待, 2, null, 2025-12-28 14:10:43, 2025-12-28 14:10:43, 0
+<==        Row: 32, 15, 请问我等我期待, 3, null, 2025-12-28 14:10:43, 2025-12-28 14:10:43, 0
+<==      Total: 3
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@145871d0]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7899de70] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,questionnaire_id,content,type,is_required,sort,max_select_num,input_type,create_time,update_time,deleted FROM question WHERE deleted=0 AND (questionnaire_id = ?) ORDER BY sort ASC
+==> Parameters: 8(Long)
+<==    Columns: id, questionnaire_id, content, type, is_required, sort, max_select_num, input_type, create_time, update_time, deleted
+<==        Row: 10, 8, 是的是的, 1, 1, 1, null, 0, 2025-12-28 13:26:07, 2025-12-28 13:26:07, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7899de70]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7d598c59] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,question_id,content,sort,jump_question_id,create_time,update_time,deleted FROM question_option WHERE deleted=0 AND (question_id = ?) ORDER BY sort ASC
+==> Parameters: 10(Long)
+<==    Columns: id, question_id, content, sort, jump_question_id, create_time, update_time, deleted
+<==        Row: 20, 10, 大苏打盛大的, 1, null, 2025-12-28 13:26:07, 2025-12-28 13:26:07, 0
+<==        Row: 21, 10, 萨达, 2, null, 2025-12-28 13:26:07, 2025-12-28 13:26:07, 0
+<==      Total: 2
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7d598c59]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2ad451a2] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,questionnaire_id,content,type,is_required,sort,max_select_num,input_type,create_time,update_time,deleted FROM question WHERE deleted=0 AND (questionnaire_id = ?) ORDER BY sort ASC
+==> Parameters: 7(Long)
+<==    Columns: id, questionnaire_id, content, type, is_required, sort, max_select_num, input_type, create_time, update_time, deleted
+<==        Row: 17, 7, 人格啊, 0, 1, 1, null, 0, 2025-12-28 14:51:45, 2025-12-28 14:51:45, 0
+<==        Row: 18, 7, 太挨个, 1, 1, 2, null, 0, 2025-12-28 14:51:45, 2025-12-28 14:51:45, 0
+<==      Total: 2
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2ad451a2]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7498ac52] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,question_id,content,sort,jump_question_id,create_time,update_time,deleted FROM question_option WHERE deleted=0 AND (question_id = ?) ORDER BY sort ASC
+==> Parameters: 17(Long)
+<==    Columns: id, question_id, content, sort, jump_question_id, create_time, update_time, deleted
+<==        Row: 36, 17, 热轧二, 1, null, 2025-12-28 14:51:45, 2025-12-28 14:51:45, 0
+<==        Row: 37, 17, 人噶er, 2, null, 2025-12-28 14:51:45, 2025-12-28 14:51:45, 0
+<==        Row: 38, 17, 卡人好好干, 3, null, 2025-12-28 14:51:45, 2025-12-28 14:51:45, 0
+<==      Total: 3
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7498ac52]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@232e09ce] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,question_id,content,sort,jump_question_id,create_time,update_time,deleted FROM question_option WHERE deleted=0 AND (question_id = ?) ORDER BY sort ASC
+==> Parameters: 18(Long)
+<==    Columns: id, question_id, content, sort, jump_question_id, create_time, update_time, deleted
+<==        Row: 39, 18, 虎牙, 1, null, 2025-12-28 14:51:45, 2025-12-28 14:51:45, 0
+<==        Row: 40, 18, 合同是人体, 2, null, 2025-12-28 14:51:45, 2025-12-28 14:51:45, 0
+<==      Total: 2
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@232e09ce]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@8e873a1] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT q.id, q.user_id, q.title, q.description, q.category, q.deadline, q.is_anonymous, q.status, q.audit_status, q.link, q.create_time, (SELECT COUNT(*) FROM question qu WHERE qu.questionnaire_id = q.id AND qu.deleted = 0) as question_count, (SELECT COUNT(*) FROM answer a WHERE a.questionnaire_id = q.id AND a.deleted = 0) as answer_count FROM questionnaire q WHERE q.deleted = 0 AND q.user_id = ? ORDER BY q.create_time DESC
+==> Parameters: 3(Long)
+<==    Columns: id, user_id, title, description, category, deadline, is_anonymous, status, audit_status, link, create_time, question_count, answer_count
+<==        Row: 15, 3, 888888, <<BLOB>>, 2, null, 1, 1, 0, http://localhost:8080/fill/15, 2025-12-28 16:54:53, 1, 1
+<==        Row: 12, 3, 请求, <<BLOB>>, 5, null, 1, 1, 0, http://localhost:8080/fill/12, 2025-12-28 14:10:46, 1, 0
+<==        Row: 11, 3, 请求, <<BLOB>>, 5, null, 1, 0, 0, null, 2025-12-28 14:10:43, 1, 0
+<==        Row: 8, 3, 方法, <<BLOB>>, 4, null, 1, 0, 0, null, 2025-12-28 13:26:07, 1, 0
+<==        Row: 7, 3, 热高热, <<BLOB>>, 3, null, 1, 1, 0, null, 2025-12-28 13:13:20, 2, 1
+<==      Total: 5
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@8e873a1]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@d96d915] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,questionnaire_id,content,type,is_required,sort,max_select_num,input_type,create_time,update_time,deleted FROM question WHERE deleted=0 AND (questionnaire_id = ?) ORDER BY sort ASC
+==> Parameters: 15(Long)
+<==    Columns: id, questionnaire_id, content, type, is_required, sort, max_select_num, input_type, create_time, update_time, deleted
+<==        Row: 22, 15, 5555, 0, 0, 1, null, 0, 2025-12-28 16:54:53, 2025-12-28 16:54:53, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@d96d915]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@29e9128e] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,question_id,content,sort,jump_question_id,create_time,update_time,deleted FROM question_option WHERE deleted=0 AND (question_id = ?) ORDER BY sort ASC
+==> Parameters: 22(Long)
+<==    Columns: id, question_id, content, sort, jump_question_id, create_time, update_time, deleted
+<==        Row: 50, 22, 222, 1, null, 2025-12-28 16:54:53, 2025-12-28 16:54:53, 0
+<==        Row: 51, 22, 333, 2, null, 2025-12-28 16:54:53, 2025-12-28 16:54:53, 0
+<==      Total: 2
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@29e9128e]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@79e879e9] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,questionnaire_id,content,type,is_required,sort,max_select_num,input_type,create_time,update_time,deleted FROM question WHERE deleted=0 AND (questionnaire_id = ?) ORDER BY sort ASC
+==> Parameters: 12(Long)
+<==    Columns: id, questionnaire_id, content, type, is_required, sort, max_select_num, input_type, create_time, update_time, deleted
+<==        Row: 16, 12, 我的期望的, 0, 1, 1, null, 0, 2025-12-28 14:10:46, 2025-12-28 14:10:46, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@79e879e9]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@42794aba] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,question_id,content,sort,jump_question_id,create_time,update_time,deleted FROM question_option WHERE deleted=0 AND (question_id = ?) ORDER BY sort ASC
+==> Parameters: 16(Long)
+<==    Columns: id, question_id, content, sort, jump_question_id, create_time, update_time, deleted
+<==        Row: 33, 16, 啊我去打网球的, 1, null, 2025-12-28 14:10:46, 2025-12-28 14:10:46, 0
+<==        Row: 34, 16, 我等我期待, 2, null, 2025-12-28 14:10:46, 2025-12-28 14:10:46, 0
+<==        Row: 35, 16, 请问我等我期待, 3, null, 2025-12-28 14:10:46, 2025-12-28 14:10:46, 0
+<==      Total: 3
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@42794aba]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@50379c8a] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,questionnaire_id,content,type,is_required,sort,max_select_num,input_type,create_time,update_time,deleted FROM question WHERE deleted=0 AND (questionnaire_id = ?) ORDER BY sort ASC
+==> Parameters: 11(Long)
+<==    Columns: id, questionnaire_id, content, type, is_required, sort, max_select_num, input_type, create_time, update_time, deleted
+<==        Row: 15, 11, 我的期望的, 0, 1, 1, null, 0, 2025-12-28 14:10:43, 2025-12-28 14:10:43, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@50379c8a]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@517646ad] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,question_id,content,sort,jump_question_id,create_time,update_time,deleted FROM question_option WHERE deleted=0 AND (question_id = ?) ORDER BY sort ASC
+==> Parameters: 15(Long)
+<==    Columns: id, question_id, content, sort, jump_question_id, create_time, update_time, deleted
+<==        Row: 30, 15, 啊我去打网球的, 1, null, 2025-12-28 14:10:43, 2025-12-28 14:10:43, 0
+<==        Row: 31, 15, 我等我期待, 2, null, 2025-12-28 14:10:43, 2025-12-28 14:10:43, 0
+<==        Row: 32, 15, 请问我等我期待, 3, null, 2025-12-28 14:10:43, 2025-12-28 14:10:43, 0
+<==      Total: 3
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@517646ad]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3e5f396] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,questionnaire_id,content,type,is_required,sort,max_select_num,input_type,create_time,update_time,deleted FROM question WHERE deleted=0 AND (questionnaire_id = ?) ORDER BY sort ASC
+==> Parameters: 8(Long)
+<==    Columns: id, questionnaire_id, content, type, is_required, sort, max_select_num, input_type, create_time, update_time, deleted
+<==        Row: 10, 8, 是的是的, 1, 1, 1, null, 0, 2025-12-28 13:26:07, 2025-12-28 13:26:07, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3e5f396]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2e04cbb9] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,question_id,content,sort,jump_question_id,create_time,update_time,deleted FROM question_option WHERE deleted=0 AND (question_id = ?) ORDER BY sort ASC
+==> Parameters: 10(Long)
+<==    Columns: id, question_id, content, sort, jump_question_id, create_time, update_time, deleted
+<==        Row: 20, 10, 大苏打盛大的, 1, null, 2025-12-28 13:26:07, 2025-12-28 13:26:07, 0
+<==        Row: 21, 10, 萨达, 2, null, 2025-12-28 13:26:07, 2025-12-28 13:26:07, 0
+<==      Total: 2
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2e04cbb9]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a3a0ce3] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,questionnaire_id,content,type,is_required,sort,max_select_num,input_type,create_time,update_time,deleted FROM question WHERE deleted=0 AND (questionnaire_id = ?) ORDER BY sort ASC
+==> Parameters: 7(Long)
+<==    Columns: id, questionnaire_id, content, type, is_required, sort, max_select_num, input_type, create_time, update_time, deleted
+<==        Row: 17, 7, 人格啊, 0, 1, 1, null, 0, 2025-12-28 14:51:45, 2025-12-28 14:51:45, 0
+<==        Row: 18, 7, 太挨个, 1, 1, 2, null, 0, 2025-12-28 14:51:45, 2025-12-28 14:51:45, 0
+<==      Total: 2
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3a3a0ce3]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5adbdc0e] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,question_id,content,sort,jump_question_id,create_time,update_time,deleted FROM question_option WHERE deleted=0 AND (question_id = ?) ORDER BY sort ASC
+==> Parameters: 17(Long)
+<==    Columns: id, question_id, content, sort, jump_question_id, create_time, update_time, deleted
+<==        Row: 36, 17, 热轧二, 1, null, 2025-12-28 14:51:45, 2025-12-28 14:51:45, 0
+<==        Row: 37, 17, 人噶er, 2, null, 2025-12-28 14:51:45, 2025-12-28 14:51:45, 0
+<==        Row: 38, 17, 卡人好好干, 3, null, 2025-12-28 14:51:45, 2025-12-28 14:51:45, 0
+<==      Total: 3
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5adbdc0e]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5fcbbc1a] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,question_id,content,sort,jump_question_id,create_time,update_time,deleted FROM question_option WHERE deleted=0 AND (question_id = ?) ORDER BY sort ASC
+==> Parameters: 18(Long)
+<==    Columns: id, question_id, content, sort, jump_question_id, create_time, update_time, deleted
+<==        Row: 39, 18, 虎牙, 1, null, 2025-12-28 14:51:45, 2025-12-28 14:51:45, 0
+<==        Row: 40, 18, 合同是人体, 2, null, 2025-12-28 14:51:45, 2025-12-28 14:51:45, 0
+<==      Total: 2
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5fcbbc1a]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@207aff63] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT q.id, q.user_id, q.title, q.description, q.category, q.deadline, q.is_anonymous, q.status, q.audit_status, q.link, q.create_time, (SELECT COUNT(*) FROM question qu WHERE qu.questionnaire_id = q.id AND qu.deleted = 0) as question_count, (SELECT COUNT(*) FROM answer a WHERE a.questionnaire_id = q.id AND a.deleted = 0) as answer_count FROM questionnaire q WHERE q.deleted = 0 AND q.user_id = ? ORDER BY q.create_time DESC
+==> Parameters: 3(Long)
+<==    Columns: id, user_id, title, description, category, deadline, is_anonymous, status, audit_status, link, create_time, question_count, answer_count
+<==        Row: 15, 3, 888888, <<BLOB>>, 2, null, 1, 1, 0, http://localhost:8080/fill/15, 2025-12-28 16:54:53, 1, 1
+<==        Row: 12, 3, 请求, <<BLOB>>, 5, null, 1, 1, 0, http://localhost:8080/fill/12, 2025-12-28 14:10:46, 1, 0
+<==        Row: 11, 3, 请求, <<BLOB>>, 5, null, 1, 0, 0, null, 2025-12-28 14:10:43, 1, 0
+<==        Row: 8, 3, 方法, <<BLOB>>, 4, null, 1, 0, 0, null, 2025-12-28 13:26:07, 1, 0
+<==        Row: 7, 3, 热高热, <<BLOB>>, 3, null, 1, 1, 0, null, 2025-12-28 13:13:20, 2, 1
+<==      Total: 5
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@207aff63]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6c5e7d9f] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,questionnaire_id,content,type,is_required,sort,max_select_num,input_type,create_time,update_time,deleted FROM question WHERE deleted=0 AND (questionnaire_id = ?) ORDER BY sort ASC
+==> Parameters: 15(Long)
+<==    Columns: id, questionnaire_id, content, type, is_required, sort, max_select_num, input_type, create_time, update_time, deleted
+<==        Row: 22, 15, 5555, 0, 0, 1, null, 0, 2025-12-28 16:54:53, 2025-12-28 16:54:53, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6c5e7d9f]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@31592c6d] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,question_id,content,sort,jump_question_id,create_time,update_time,deleted FROM question_option WHERE deleted=0 AND (question_id = ?) ORDER BY sort ASC
+==> Parameters: 22(Long)
+<==    Columns: id, question_id, content, sort, jump_question_id, create_time, update_time, deleted
+<==        Row: 50, 22, 222, 1, null, 2025-12-28 16:54:53, 2025-12-28 16:54:53, 0
+<==        Row: 51, 22, 333, 2, null, 2025-12-28 16:54:53, 2025-12-28 16:54:53, 0
+<==      Total: 2
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@31592c6d]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@791a6d4a] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,questionnaire_id,content,type,is_required,sort,max_select_num,input_type,create_time,update_time,deleted FROM question WHERE deleted=0 AND (questionnaire_id = ?) ORDER BY sort ASC
+==> Parameters: 12(Long)
+<==    Columns: id, questionnaire_id, content, type, is_required, sort, max_select_num, input_type, create_time, update_time, deleted
+<==        Row: 16, 12, 我的期望的, 0, 1, 1, null, 0, 2025-12-28 14:10:46, 2025-12-28 14:10:46, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@791a6d4a]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3dda887d] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,question_id,content,sort,jump_question_id,create_time,update_time,deleted FROM question_option WHERE deleted=0 AND (question_id = ?) ORDER BY sort ASC
+==> Parameters: 16(Long)
+<==    Columns: id, question_id, content, sort, jump_question_id, create_time, update_time, deleted
+<==        Row: 33, 16, 啊我去打网球的, 1, null, 2025-12-28 14:10:46, 2025-12-28 14:10:46, 0
+<==        Row: 34, 16, 我等我期待, 2, null, 2025-12-28 14:10:46, 2025-12-28 14:10:46, 0
+<==        Row: 35, 16, 请问我等我期待, 3, null, 2025-12-28 14:10:46, 2025-12-28 14:10:46, 0
+<==      Total: 3
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3dda887d]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4b5f3be1] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,questionnaire_id,content,type,is_required,sort,max_select_num,input_type,create_time,update_time,deleted FROM question WHERE deleted=0 AND (questionnaire_id = ?) ORDER BY sort ASC
+==> Parameters: 11(Long)
+<==    Columns: id, questionnaire_id, content, type, is_required, sort, max_select_num, input_type, create_time, update_time, deleted
+<==        Row: 15, 11, 我的期望的, 0, 1, 1, null, 0, 2025-12-28 14:10:43, 2025-12-28 14:10:43, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4b5f3be1]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2042fb90] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,question_id,content,sort,jump_question_id,create_time,update_time,deleted FROM question_option WHERE deleted=0 AND (question_id = ?) ORDER BY sort ASC
+==> Parameters: 15(Long)
+<==    Columns: id, question_id, content, sort, jump_question_id, create_time, update_time, deleted
+<==        Row: 30, 15, 啊我去打网球的, 1, null, 2025-12-28 14:10:43, 2025-12-28 14:10:43, 0
+<==        Row: 31, 15, 我等我期待, 2, null, 2025-12-28 14:10:43, 2025-12-28 14:10:43, 0
+<==        Row: 32, 15, 请问我等我期待, 3, null, 2025-12-28 14:10:43, 2025-12-28 14:10:43, 0
+<==      Total: 3
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2042fb90]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@586adbfd] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,questionnaire_id,content,type,is_required,sort,max_select_num,input_type,create_time,update_time,deleted FROM question WHERE deleted=0 AND (questionnaire_id = ?) ORDER BY sort ASC
+==> Parameters: 8(Long)
+<==    Columns: id, questionnaire_id, content, type, is_required, sort, max_select_num, input_type, create_time, update_time, deleted
+<==        Row: 10, 8, 是的是的, 1, 1, 1, null, 0, 2025-12-28 13:26:07, 2025-12-28 13:26:07, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@586adbfd]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@36f51958] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,question_id,content,sort,jump_question_id,create_time,update_time,deleted FROM question_option WHERE deleted=0 AND (question_id = ?) ORDER BY sort ASC
+==> Parameters: 10(Long)
+<==    Columns: id, question_id, content, sort, jump_question_id, create_time, update_time, deleted
+<==        Row: 20, 10, 大苏打盛大的, 1, null, 2025-12-28 13:26:07, 2025-12-28 13:26:07, 0
+<==        Row: 21, 10, 萨达, 2, null, 2025-12-28 13:26:07, 2025-12-28 13:26:07, 0
+<==      Total: 2
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@36f51958]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@11943c9c] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,questionnaire_id,content,type,is_required,sort,max_select_num,input_type,create_time,update_time,deleted FROM question WHERE deleted=0 AND (questionnaire_id = ?) ORDER BY sort ASC
+==> Parameters: 7(Long)
+<==    Columns: id, questionnaire_id, content, type, is_required, sort, max_select_num, input_type, create_time, update_time, deleted
+<==        Row: 17, 7, 人格啊, 0, 1, 1, null, 0, 2025-12-28 14:51:45, 2025-12-28 14:51:45, 0
+<==        Row: 18, 7, 太挨个, 1, 1, 2, null, 0, 2025-12-28 14:51:45, 2025-12-28 14:51:45, 0
+<==      Total: 2
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@11943c9c]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@69ebc262] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,question_id,content,sort,jump_question_id,create_time,update_time,deleted FROM question_option WHERE deleted=0 AND (question_id = ?) ORDER BY sort ASC
+==> Parameters: 17(Long)
+<==    Columns: id, question_id, content, sort, jump_question_id, create_time, update_time, deleted
+<==        Row: 36, 17, 热轧二, 1, null, 2025-12-28 14:51:45, 2025-12-28 14:51:45, 0
+<==        Row: 37, 17, 人噶er, 2, null, 2025-12-28 14:51:45, 2025-12-28 14:51:45, 0
+<==        Row: 38, 17, 卡人好好干, 3, null, 2025-12-28 14:51:45, 2025-12-28 14:51:45, 0
+<==      Total: 3
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@69ebc262]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3b2b01d4] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,question_id,content,sort,jump_question_id,create_time,update_time,deleted FROM question_option WHERE deleted=0 AND (question_id = ?) ORDER BY sort ASC
+==> Parameters: 18(Long)
+<==    Columns: id, question_id, content, sort, jump_question_id, create_time, update_time, deleted
+<==        Row: 39, 18, 虎牙, 1, null, 2025-12-28 14:51:45, 2025-12-28 14:51:45, 0
+<==        Row: 40, 18, 合同是人体, 2, null, 2025-12-28 14:51:45, 2025-12-28 14:51:45, 0
+<==      Total: 2
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3b2b01d4]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@29bef68e] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT q.id, q.user_id, q.title, q.description, q.category, q.deadline, q.is_anonymous, q.status, q.audit_status, q.link, q.create_time, (SELECT COUNT(*) FROM question qu WHERE qu.questionnaire_id = q.id AND qu.deleted = 0) as question_count, (SELECT COUNT(*) FROM answer a WHERE a.questionnaire_id = q.id AND a.deleted = 0) as answer_count FROM questionnaire q WHERE q.deleted = 0 AND q.user_id = ? ORDER BY q.create_time DESC
+==> Parameters: 3(Long)
+<==    Columns: id, user_id, title, description, category, deadline, is_anonymous, status, audit_status, link, create_time, question_count, answer_count
+<==        Row: 15, 3, 888888, <<BLOB>>, 2, null, 1, 1, 0, http://localhost:8080/fill/15, 2025-12-28 16:54:53, 1, 1
+<==        Row: 12, 3, 请求, <<BLOB>>, 5, null, 1, 1, 0, http://localhost:8080/fill/12, 2025-12-28 14:10:46, 1, 0
+<==        Row: 11, 3, 请求, <<BLOB>>, 5, null, 1, 0, 0, null, 2025-12-28 14:10:43, 1, 0
+<==        Row: 8, 3, 方法, <<BLOB>>, 4, null, 1, 0, 0, null, 2025-12-28 13:26:07, 1, 0
+<==        Row: 7, 3, 热高热, <<BLOB>>, 3, null, 1, 1, 0, null, 2025-12-28 13:13:20, 2, 1
+<==      Total: 5
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@29bef68e]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@73a02ef0] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,questionnaire_id,content,type,is_required,sort,max_select_num,input_type,create_time,update_time,deleted FROM question WHERE deleted=0 AND (questionnaire_id = ?) ORDER BY sort ASC
+==> Parameters: 15(Long)
+<==    Columns: id, questionnaire_id, content, type, is_required, sort, max_select_num, input_type, create_time, update_time, deleted
+<==        Row: 22, 15, 5555, 0, 0, 1, null, 0, 2025-12-28 16:54:53, 2025-12-28 16:54:53, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@73a02ef0]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@39633b42] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,question_id,content,sort,jump_question_id,create_time,update_time,deleted FROM question_option WHERE deleted=0 AND (question_id = ?) ORDER BY sort ASC
+==> Parameters: 22(Long)
+<==    Columns: id, question_id, content, sort, jump_question_id, create_time, update_time, deleted
+<==        Row: 50, 22, 222, 1, null, 2025-12-28 16:54:53, 2025-12-28 16:54:53, 0
+<==        Row: 51, 22, 333, 2, null, 2025-12-28 16:54:53, 2025-12-28 16:54:53, 0
+<==      Total: 2
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@39633b42]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4908bc33] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,questionnaire_id,content,type,is_required,sort,max_select_num,input_type,create_time,update_time,deleted FROM question WHERE deleted=0 AND (questionnaire_id = ?) ORDER BY sort ASC
+==> Parameters: 12(Long)
+<==    Columns: id, questionnaire_id, content, type, is_required, sort, max_select_num, input_type, create_time, update_time, deleted
+<==        Row: 16, 12, 我的期望的, 0, 1, 1, null, 0, 2025-12-28 14:10:46, 2025-12-28 14:10:46, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4908bc33]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@33a104eb] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,question_id,content,sort,jump_question_id,create_time,update_time,deleted FROM question_option WHERE deleted=0 AND (question_id = ?) ORDER BY sort ASC
+==> Parameters: 16(Long)
+<==    Columns: id, question_id, content, sort, jump_question_id, create_time, update_time, deleted
+<==        Row: 33, 16, 啊我去打网球的, 1, null, 2025-12-28 14:10:46, 2025-12-28 14:10:46, 0
+<==        Row: 34, 16, 我等我期待, 2, null, 2025-12-28 14:10:46, 2025-12-28 14:10:46, 0
+<==        Row: 35, 16, 请问我等我期待, 3, null, 2025-12-28 14:10:46, 2025-12-28 14:10:46, 0
+<==      Total: 3
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@33a104eb]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6aac7c5b] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,questionnaire_id,content,type,is_required,sort,max_select_num,input_type,create_time,update_time,deleted FROM question WHERE deleted=0 AND (questionnaire_id = ?) ORDER BY sort ASC
+==> Parameters: 11(Long)
+<==    Columns: id, questionnaire_id, content, type, is_required, sort, max_select_num, input_type, create_time, update_time, deleted
+<==        Row: 15, 11, 我的期望的, 0, 1, 1, null, 0, 2025-12-28 14:10:43, 2025-12-28 14:10:43, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6aac7c5b]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6d91fcc] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,question_id,content,sort,jump_question_id,create_time,update_time,deleted FROM question_option WHERE deleted=0 AND (question_id = ?) ORDER BY sort ASC
+==> Parameters: 15(Long)
+<==    Columns: id, question_id, content, sort, jump_question_id, create_time, update_time, deleted
+<==        Row: 30, 15, 啊我去打网球的, 1, null, 2025-12-28 14:10:43, 2025-12-28 14:10:43, 0
+<==        Row: 31, 15, 我等我期待, 2, null, 2025-12-28 14:10:43, 2025-12-28 14:10:43, 0
+<==        Row: 32, 15, 请问我等我期待, 3, null, 2025-12-28 14:10:43, 2025-12-28 14:10:43, 0
+<==      Total: 3
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6d91fcc]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2410c052] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,questionnaire_id,content,type,is_required,sort,max_select_num,input_type,create_time,update_time,deleted FROM question WHERE deleted=0 AND (questionnaire_id = ?) ORDER BY sort ASC
+==> Parameters: 8(Long)
+<==    Columns: id, questionnaire_id, content, type, is_required, sort, max_select_num, input_type, create_time, update_time, deleted
+<==        Row: 10, 8, 是的是的, 1, 1, 1, null, 0, 2025-12-28 13:26:07, 2025-12-28 13:26:07, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2410c052]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@71909321] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,question_id,content,sort,jump_question_id,create_time,update_time,deleted FROM question_option WHERE deleted=0 AND (question_id = ?) ORDER BY sort ASC
+==> Parameters: 10(Long)
+<==    Columns: id, question_id, content, sort, jump_question_id, create_time, update_time, deleted
+<==        Row: 20, 10, 大苏打盛大的, 1, null, 2025-12-28 13:26:07, 2025-12-28 13:26:07, 0
+<==        Row: 21, 10, 萨达, 2, null, 2025-12-28 13:26:07, 2025-12-28 13:26:07, 0
+<==      Total: 2
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@71909321]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@479bfba4] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,questionnaire_id,content,type,is_required,sort,max_select_num,input_type,create_time,update_time,deleted FROM question WHERE deleted=0 AND (questionnaire_id = ?) ORDER BY sort ASC
+==> Parameters: 7(Long)
+<==    Columns: id, questionnaire_id, content, type, is_required, sort, max_select_num, input_type, create_time, update_time, deleted
+<==        Row: 17, 7, 人格啊, 0, 1, 1, null, 0, 2025-12-28 14:51:45, 2025-12-28 14:51:45, 0
+<==        Row: 18, 7, 太挨个, 1, 1, 2, null, 0, 2025-12-28 14:51:45, 2025-12-28 14:51:45, 0
+<==      Total: 2
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@479bfba4]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@430c497a] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,question_id,content,sort,jump_question_id,create_time,update_time,deleted FROM question_option WHERE deleted=0 AND (question_id = ?) ORDER BY sort ASC
+==> Parameters: 17(Long)
+<==    Columns: id, question_id, content, sort, jump_question_id, create_time, update_time, deleted
+<==        Row: 36, 17, 热轧二, 1, null, 2025-12-28 14:51:45, 2025-12-28 14:51:45, 0
+<==        Row: 37, 17, 人噶er, 2, null, 2025-12-28 14:51:45, 2025-12-28 14:51:45, 0
+<==        Row: 38, 17, 卡人好好干, 3, null, 2025-12-28 14:51:45, 2025-12-28 14:51:45, 0
+<==      Total: 3
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@430c497a]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@63e9fdbc] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,question_id,content,sort,jump_question_id,create_time,update_time,deleted FROM question_option WHERE deleted=0 AND (question_id = ?) ORDER BY sort ASC
+==> Parameters: 18(Long)
+<==    Columns: id, question_id, content, sort, jump_question_id, create_time, update_time, deleted
+<==        Row: 39, 18, 虎牙, 1, null, 2025-12-28 14:51:45, 2025-12-28 14:51:45, 0
+<==        Row: 40, 18, 合同是人体, 2, null, 2025-12-28 14:51:45, 2025-12-28 14:51:45, 0
+<==      Total: 2
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@63e9fdbc]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@56623f92] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,user_id,title,description,category,deadline,is_anonymous,status,audit_status,link,create_time,update_time,deleted FROM questionnaire WHERE deleted=0 AND (status = ?) ORDER BY create_time DESC
+==> Parameters: 1(Integer)
+<==    Columns: id, user_id, title, description, category, deadline, is_anonymous, status, audit_status, link, create_time, update_time, deleted
+<==        Row: 15, 3, 888888, <<BLOB>>, 2, null, 1, 1, 0, http://localhost:8080/fill/15, 2025-12-28 16:54:53, 2025-12-28 16:54:53, 0
+<==        Row: 14, 5, 666666666, <<BLOB>>, 1, null, 1, 1, 0, http://localhost:8080/fill/14, 2025-12-28 16:53:11, 2025-12-28 16:53:11, 0
+<==        Row: 13, 5, 3.0测试, <<BLOB>>, 1, null, 1, 1, 0, http://localhost:8080/fill/13, 2025-12-28 15:18:36, 2025-12-28 15:18:36, 0
+<==        Row: 12, 3, 请求, <<BLOB>>, 5, null, 1, 1, 0, http://localhost:8080/fill/12, 2025-12-28 14:10:46, 2025-12-28 14:10:46, 0
+<==        Row: 10, 5, 2.0, <<BLOB>>, 4, null, 1, 1, 0, http://localhost:8080/fill/10, 2025-12-28 13:36:01, 2025-12-28 13:36:01, 0
+<==        Row: 7, 3, 热高热, <<BLOB>>, 3, null, 1, 1, 0, null, 2025-12-28 13:13:20, 2025-12-28 13:13:20, 0
+<==      Total: 6
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@56623f92]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@77f21efc] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,questionnaire_id,content,type,is_required,sort,max_select_num,input_type,create_time,update_time,deleted FROM question WHERE deleted=0 AND (questionnaire_id = ?) ORDER BY sort ASC
+==> Parameters: 15(Long)
+<==    Columns: id, questionnaire_id, content, type, is_required, sort, max_select_num, input_type, create_time, update_time, deleted
+<==        Row: 22, 15, 5555, 0, 0, 1, null, 0, 2025-12-28 16:54:53, 2025-12-28 16:54:53, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@77f21efc]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@405469f6] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,questionnaire_id,content,type,is_required,sort,max_select_num,input_type,create_time,update_time,deleted FROM question WHERE deleted=0 AND (questionnaire_id = ?) ORDER BY sort ASC
+==> Parameters: 14(Long)
+<==    Columns: id, questionnaire_id, content, type, is_required, sort, max_select_num, input_type, create_time, update_time, deleted
+<==        Row: 21, 14, sadasdcas, 0, 0, 1, null, 0, 2025-12-28 16:53:11, 2025-12-28 16:53:11, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@405469f6]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@544c975c] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,questionnaire_id,content,type,is_required,sort,max_select_num,input_type,create_time,update_time,deleted FROM question WHERE deleted=0 AND (questionnaire_id = ?) ORDER BY sort ASC
+==> Parameters: 13(Long)
+<==    Columns: id, questionnaire_id, content, type, is_required, sort, max_select_num, input_type, create_time, update_time, deleted
+<==        Row: 19, 13, 有无闪退, 0, 0, 1, null, 0, 2025-12-28 15:18:36, 2025-12-28 15:18:36, 0
+<==        Row: 20, 13, 喜欢什么美食, 1, 0, 2, null, 0, 2025-12-28 15:18:36, 2025-12-28 15:18:36, 0
+<==      Total: 2
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@544c975c]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5a959c65] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,questionnaire_id,content,type,is_required,sort,max_select_num,input_type,create_time,update_time,deleted FROM question WHERE deleted=0 AND (questionnaire_id = ?) ORDER BY sort ASC
+==> Parameters: 12(Long)
+<==    Columns: id, questionnaire_id, content, type, is_required, sort, max_select_num, input_type, create_time, update_time, deleted
+<==        Row: 16, 12, 我的期望的, 0, 1, 1, null, 0, 2025-12-28 14:10:46, 2025-12-28 14:10:46, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5a959c65]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2a6cd840] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,questionnaire_id,content,type,is_required,sort,max_select_num,input_type,create_time,update_time,deleted FROM question WHERE deleted=0 AND (questionnaire_id = ?) ORDER BY sort ASC
+==> Parameters: 10(Long)
+<==    Columns: id, questionnaire_id, content, type, is_required, sort, max_select_num, input_type, create_time, update_time, deleted
+<==        Row: 14, 10, 违反文案, 1, 0, 1, null, 0, 2025-12-28 13:48:38, 2025-12-28 13:48:38, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2a6cd840]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@f1957f9] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,questionnaire_id,content,type,is_required,sort,max_select_num,input_type,create_time,update_time,deleted FROM question WHERE deleted=0 AND (questionnaire_id = ?) ORDER BY sort ASC
+==> Parameters: 7(Long)
+<==    Columns: id, questionnaire_id, content, type, is_required, sort, max_select_num, input_type, create_time, update_time, deleted
+<==        Row: 17, 7, 人格啊, 0, 1, 1, null, 0, 2025-12-28 14:51:45, 2025-12-28 14:51:45, 0
+<==        Row: 18, 7, 太挨个, 1, 1, 2, null, 0, 2025-12-28 14:51:45, 2025-12-28 14:51:45, 0
+<==      Total: 2
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@f1957f9]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@60714f5] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT q.id, q.user_id, q.title, q.description, q.category, q.deadline, q.is_anonymous, q.status, q.audit_status, q.link, q.create_time, (SELECT COUNT(*) FROM question qu WHERE qu.questionnaire_id = q.id AND qu.deleted = 0) as question_count, (SELECT COUNT(*) FROM answer a WHERE a.questionnaire_id = q.id AND a.deleted = 0) as answer_count FROM questionnaire q WHERE q.deleted = 0 AND q.user_id = ? ORDER BY q.create_time DESC
+==> Parameters: 3(Long)
+<==    Columns: id, user_id, title, description, category, deadline, is_anonymous, status, audit_status, link, create_time, question_count, answer_count
+<==        Row: 15, 3, 888888, <<BLOB>>, 2, null, 1, 1, 0, http://localhost:8080/fill/15, 2025-12-28 16:54:53, 1, 1
+<==        Row: 12, 3, 请求, <<BLOB>>, 5, null, 1, 1, 0, http://localhost:8080/fill/12, 2025-12-28 14:10:46, 1, 0
+<==        Row: 11, 3, 请求, <<BLOB>>, 5, null, 1, 0, 0, null, 2025-12-28 14:10:43, 1, 0
+<==        Row: 8, 3, 方法, <<BLOB>>, 4, null, 1, 0, 0, null, 2025-12-28 13:26:07, 1, 0
+<==        Row: 7, 3, 热高热, <<BLOB>>, 3, null, 1, 1, 0, null, 2025-12-28 13:13:20, 2, 1
+<==      Total: 5
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@60714f5]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2d6af464] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,questionnaire_id,content,type,is_required,sort,max_select_num,input_type,create_time,update_time,deleted FROM question WHERE deleted=0 AND (questionnaire_id = ?) ORDER BY sort ASC
+==> Parameters: 15(Long)
+<==    Columns: id, questionnaire_id, content, type, is_required, sort, max_select_num, input_type, create_time, update_time, deleted
+<==        Row: 22, 15, 5555, 0, 0, 1, null, 0, 2025-12-28 16:54:53, 2025-12-28 16:54:53, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2d6af464]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7deb2803] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,question_id,content,sort,jump_question_id,create_time,update_time,deleted FROM question_option WHERE deleted=0 AND (question_id = ?) ORDER BY sort ASC
+==> Parameters: 22(Long)
+<==    Columns: id, question_id, content, sort, jump_question_id, create_time, update_time, deleted
+<==        Row: 50, 22, 222, 1, null, 2025-12-28 16:54:53, 2025-12-28 16:54:53, 0
+<==        Row: 51, 22, 333, 2, null, 2025-12-28 16:54:53, 2025-12-28 16:54:53, 0
+<==      Total: 2
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7deb2803]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@41c38d9b] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,questionnaire_id,content,type,is_required,sort,max_select_num,input_type,create_time,update_time,deleted FROM question WHERE deleted=0 AND (questionnaire_id = ?) ORDER BY sort ASC
+==> Parameters: 12(Long)
+<==    Columns: id, questionnaire_id, content, type, is_required, sort, max_select_num, input_type, create_time, update_time, deleted
+<==        Row: 16, 12, 我的期望的, 0, 1, 1, null, 0, 2025-12-28 14:10:46, 2025-12-28 14:10:46, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@41c38d9b]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@f3283df] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,question_id,content,sort,jump_question_id,create_time,update_time,deleted FROM question_option WHERE deleted=0 AND (question_id = ?) ORDER BY sort ASC
+==> Parameters: 16(Long)
+<==    Columns: id, question_id, content, sort, jump_question_id, create_time, update_time, deleted
+<==        Row: 33, 16, 啊我去打网球的, 1, null, 2025-12-28 14:10:46, 2025-12-28 14:10:46, 0
+<==        Row: 34, 16, 我等我期待, 2, null, 2025-12-28 14:10:46, 2025-12-28 14:10:46, 0
+<==        Row: 35, 16, 请问我等我期待, 3, null, 2025-12-28 14:10:46, 2025-12-28 14:10:46, 0
+<==      Total: 3
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@f3283df]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6db51b05] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,questionnaire_id,content,type,is_required,sort,max_select_num,input_type,create_time,update_time,deleted FROM question WHERE deleted=0 AND (questionnaire_id = ?) ORDER BY sort ASC
+==> Parameters: 11(Long)
+<==    Columns: id, questionnaire_id, content, type, is_required, sort, max_select_num, input_type, create_time, update_time, deleted
+<==        Row: 15, 11, 我的期望的, 0, 1, 1, null, 0, 2025-12-28 14:10:43, 2025-12-28 14:10:43, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6db51b05]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3510409d] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,question_id,content,sort,jump_question_id,create_time,update_time,deleted FROM question_option WHERE deleted=0 AND (question_id = ?) ORDER BY sort ASC
+==> Parameters: 15(Long)
+<==    Columns: id, question_id, content, sort, jump_question_id, create_time, update_time, deleted
+<==        Row: 30, 15, 啊我去打网球的, 1, null, 2025-12-28 14:10:43, 2025-12-28 14:10:43, 0
+<==        Row: 31, 15, 我等我期待, 2, null, 2025-12-28 14:10:43, 2025-12-28 14:10:43, 0
+<==        Row: 32, 15, 请问我等我期待, 3, null, 2025-12-28 14:10:43, 2025-12-28 14:10:43, 0
+<==      Total: 3
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3510409d]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7fce9979] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,questionnaire_id,content,type,is_required,sort,max_select_num,input_type,create_time,update_time,deleted FROM question WHERE deleted=0 AND (questionnaire_id = ?) ORDER BY sort ASC
+==> Parameters: 8(Long)
+<==    Columns: id, questionnaire_id, content, type, is_required, sort, max_select_num, input_type, create_time, update_time, deleted
+<==        Row: 10, 8, 是的是的, 1, 1, 1, null, 0, 2025-12-28 13:26:07, 2025-12-28 13:26:07, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7fce9979]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5ecb6d9f] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,question_id,content,sort,jump_question_id,create_time,update_time,deleted FROM question_option WHERE deleted=0 AND (question_id = ?) ORDER BY sort ASC
+==> Parameters: 10(Long)
+<==    Columns: id, question_id, content, sort, jump_question_id, create_time, update_time, deleted
+<==        Row: 20, 10, 大苏打盛大的, 1, null, 2025-12-28 13:26:07, 2025-12-28 13:26:07, 0
+<==        Row: 21, 10, 萨达, 2, null, 2025-12-28 13:26:07, 2025-12-28 13:26:07, 0
+<==      Total: 2
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5ecb6d9f]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@592f86e1] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,questionnaire_id,content,type,is_required,sort,max_select_num,input_type,create_time,update_time,deleted FROM question WHERE deleted=0 AND (questionnaire_id = ?) ORDER BY sort ASC
+==> Parameters: 7(Long)
+<==    Columns: id, questionnaire_id, content, type, is_required, sort, max_select_num, input_type, create_time, update_time, deleted
+<==        Row: 17, 7, 人格啊, 0, 1, 1, null, 0, 2025-12-28 14:51:45, 2025-12-28 14:51:45, 0
+<==        Row: 18, 7, 太挨个, 1, 1, 2, null, 0, 2025-12-28 14:51:45, 2025-12-28 14:51:45, 0
+<==      Total: 2
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@592f86e1]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@732e596c] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,question_id,content,sort,jump_question_id,create_time,update_time,deleted FROM question_option WHERE deleted=0 AND (question_id = ?) ORDER BY sort ASC
+==> Parameters: 17(Long)
+<==    Columns: id, question_id, content, sort, jump_question_id, create_time, update_time, deleted
+<==        Row: 36, 17, 热轧二, 1, null, 2025-12-28 14:51:45, 2025-12-28 14:51:45, 0
+<==        Row: 37, 17, 人噶er, 2, null, 2025-12-28 14:51:45, 2025-12-28 14:51:45, 0
+<==        Row: 38, 17, 卡人好好干, 3, null, 2025-12-28 14:51:45, 2025-12-28 14:51:45, 0
+<==      Total: 3
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@732e596c]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@aaa9129] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,question_id,content,sort,jump_question_id,create_time,update_time,deleted FROM question_option WHERE deleted=0 AND (question_id = ?) ORDER BY sort ASC
+==> Parameters: 18(Long)
+<==    Columns: id, question_id, content, sort, jump_question_id, create_time, update_time, deleted
+<==        Row: 39, 18, 虎牙, 1, null, 2025-12-28 14:51:45, 2025-12-28 14:51:45, 0
+<==        Row: 40, 18, 合同是人体, 2, null, 2025-12-28 14:51:45, 2025-12-28 14:51:45, 0
+<==      Total: 2
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@aaa9129]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@208f4598] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,username,password,phone,email,nickname,role,points,create_time,update_time,deleted FROM sys_user WHERE deleted=0 AND (phone = ? OR username = ?)
+==> Parameters: 17836900831(String), 17836900831(String)
+<==    Columns: id, username, password, phone, email, nickname, role, points, create_time, update_time, deleted
+<==        Row: 1, 17836900831, 85bf5831e593431e882887e077400b7f, 17836900831, null, 系统管理员, 1, 0, 2025-12-28 00:39:09, 2025-12-28 18:30:58, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@208f4598]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@28bf58e5] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,user_id,title,description,category,deadline,is_anonymous,status,audit_status,link,create_time,update_time,deleted FROM questionnaire WHERE deleted=0 AND (status = ?) ORDER BY create_time DESC
+==> Parameters: 1(Integer)
+<==    Columns: id, user_id, title, description, category, deadline, is_anonymous, status, audit_status, link, create_time, update_time, deleted
+<==        Row: 15, 3, 888888, <<BLOB>>, 2, null, 1, 1, 0, http://localhost:8080/fill/15, 2025-12-28 16:54:53, 2025-12-28 16:54:53, 0
+<==        Row: 14, 5, 666666666, <<BLOB>>, 1, null, 1, 1, 0, http://localhost:8080/fill/14, 2025-12-28 16:53:11, 2025-12-28 16:53:11, 0
+<==        Row: 13, 5, 3.0测试, <<BLOB>>, 1, null, 1, 1, 0, http://localhost:8080/fill/13, 2025-12-28 15:18:36, 2025-12-28 15:18:36, 0
+<==        Row: 12, 3, 请求, <<BLOB>>, 5, null, 1, 1, 0, http://localhost:8080/fill/12, 2025-12-28 14:10:46, 2025-12-28 14:10:46, 0
+<==        Row: 10, 5, 2.0, <<BLOB>>, 4, null, 1, 1, 0, http://localhost:8080/fill/10, 2025-12-28 13:36:01, 2025-12-28 13:36:01, 0
+<==        Row: 7, 3, 热高热, <<BLOB>>, 3, null, 1, 1, 0, null, 2025-12-28 13:13:20, 2025-12-28 13:13:20, 0
+<==      Total: 6
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@28bf58e5]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1f83d183] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,questionnaire_id,content,type,is_required,sort,max_select_num,input_type,create_time,update_time,deleted FROM question WHERE deleted=0 AND (questionnaire_id = ?) ORDER BY sort ASC
+==> Parameters: 15(Long)
+<==    Columns: id, questionnaire_id, content, type, is_required, sort, max_select_num, input_type, create_time, update_time, deleted
+<==        Row: 22, 15, 5555, 0, 0, 1, null, 0, 2025-12-28 16:54:53, 2025-12-28 16:54:53, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@1f83d183]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@74ce5fd0] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,questionnaire_id,content,type,is_required,sort,max_select_num,input_type,create_time,update_time,deleted FROM question WHERE deleted=0 AND (questionnaire_id = ?) ORDER BY sort ASC
+==> Parameters: 14(Long)
+<==    Columns: id, questionnaire_id, content, type, is_required, sort, max_select_num, input_type, create_time, update_time, deleted
+<==        Row: 21, 14, sadasdcas, 0, 0, 1, null, 0, 2025-12-28 16:53:11, 2025-12-28 16:53:11, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@74ce5fd0]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3e38418c] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,questionnaire_id,content,type,is_required,sort,max_select_num,input_type,create_time,update_time,deleted FROM question WHERE deleted=0 AND (questionnaire_id = ?) ORDER BY sort ASC
+==> Parameters: 13(Long)
+<==    Columns: id, questionnaire_id, content, type, is_required, sort, max_select_num, input_type, create_time, update_time, deleted
+<==        Row: 19, 13, 有无闪退, 0, 0, 1, null, 0, 2025-12-28 15:18:36, 2025-12-28 15:18:36, 0
+<==        Row: 20, 13, 喜欢什么美食, 1, 0, 2, null, 0, 2025-12-28 15:18:36, 2025-12-28 15:18:36, 0
+<==      Total: 2
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3e38418c]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3c724d0e] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,questionnaire_id,content,type,is_required,sort,max_select_num,input_type,create_time,update_time,deleted FROM question WHERE deleted=0 AND (questionnaire_id = ?) ORDER BY sort ASC
+==> Parameters: 12(Long)
+<==    Columns: id, questionnaire_id, content, type, is_required, sort, max_select_num, input_type, create_time, update_time, deleted
+<==        Row: 16, 12, 我的期望的, 0, 1, 1, null, 0, 2025-12-28 14:10:46, 2025-12-28 14:10:46, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@3c724d0e]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4b867ee4] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,questionnaire_id,content,type,is_required,sort,max_select_num,input_type,create_time,update_time,deleted FROM question WHERE deleted=0 AND (questionnaire_id = ?) ORDER BY sort ASC
+==> Parameters: 10(Long)
+<==    Columns: id, questionnaire_id, content, type, is_required, sort, max_select_num, input_type, create_time, update_time, deleted
+<==        Row: 14, 10, 违反文案, 1, 0, 1, null, 0, 2025-12-28 13:48:38, 2025-12-28 13:48:38, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4b867ee4]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7a43d99d] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,questionnaire_id,content,type,is_required,sort,max_select_num,input_type,create_time,update_time,deleted FROM question WHERE deleted=0 AND (questionnaire_id = ?) ORDER BY sort ASC
+==> Parameters: 7(Long)
+<==    Columns: id, questionnaire_id, content, type, is_required, sort, max_select_num, input_type, create_time, update_time, deleted
+<==        Row: 17, 7, 人格啊, 0, 1, 1, null, 0, 2025-12-28 14:51:45, 2025-12-28 14:51:45, 0
+<==        Row: 18, 7, 太挨个, 1, 1, 2, null, 0, 2025-12-28 14:51:45, 2025-12-28 14:51:45, 0
+<==      Total: 2
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7a43d99d]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@417b2b8d] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,user_id,title,description,category,deadline,is_anonymous,status,audit_status,link,create_time,update_time,deleted FROM questionnaire WHERE deleted=0 AND (status = ?) ORDER BY create_time DESC
+==> Parameters: 1(Integer)
+<==    Columns: id, user_id, title, description, category, deadline, is_anonymous, status, audit_status, link, create_time, update_time, deleted
+<==        Row: 15, 3, 888888, <<BLOB>>, 2, null, 1, 1, 0, http://localhost:8080/fill/15, 2025-12-28 16:54:53, 2025-12-28 16:54:53, 0
+<==        Row: 14, 5, 666666666, <<BLOB>>, 1, null, 1, 1, 0, http://localhost:8080/fill/14, 2025-12-28 16:53:11, 2025-12-28 16:53:11, 0
+<==        Row: 13, 5, 3.0测试, <<BLOB>>, 1, null, 1, 1, 0, http://localhost:8080/fill/13, 2025-12-28 15:18:36, 2025-12-28 15:18:36, 0
+<==        Row: 12, 3, 请求, <<BLOB>>, 5, null, 1, 1, 0, http://localhost:8080/fill/12, 2025-12-28 14:10:46, 2025-12-28 14:10:46, 0
+<==        Row: 10, 5, 2.0, <<BLOB>>, 4, null, 1, 1, 0, http://localhost:8080/fill/10, 2025-12-28 13:36:01, 2025-12-28 13:36:01, 0
+<==        Row: 7, 3, 热高热, <<BLOB>>, 3, null, 1, 1, 0, null, 2025-12-28 13:13:20, 2025-12-28 13:13:20, 0
+<==      Total: 6
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@417b2b8d]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@361e1d0b] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,questionnaire_id,content,type,is_required,sort,max_select_num,input_type,create_time,update_time,deleted FROM question WHERE deleted=0 AND (questionnaire_id = ?) ORDER BY sort ASC
+==> Parameters: 15(Long)
+<==    Columns: id, questionnaire_id, content, type, is_required, sort, max_select_num, input_type, create_time, update_time, deleted
+<==        Row: 22, 15, 5555, 0, 0, 1, null, 0, 2025-12-28 16:54:53, 2025-12-28 16:54:53, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@361e1d0b]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@173a82ec] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,questionnaire_id,content,type,is_required,sort,max_select_num,input_type,create_time,update_time,deleted FROM question WHERE deleted=0 AND (questionnaire_id = ?) ORDER BY sort ASC
+==> Parameters: 14(Long)
+<==    Columns: id, questionnaire_id, content, type, is_required, sort, max_select_num, input_type, create_time, update_time, deleted
+<==        Row: 21, 14, sadasdcas, 0, 0, 1, null, 0, 2025-12-28 16:53:11, 2025-12-28 16:53:11, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@173a82ec]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@233678e1] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,questionnaire_id,content,type,is_required,sort,max_select_num,input_type,create_time,update_time,deleted FROM question WHERE deleted=0 AND (questionnaire_id = ?) ORDER BY sort ASC
+==> Parameters: 13(Long)
+<==    Columns: id, questionnaire_id, content, type, is_required, sort, max_select_num, input_type, create_time, update_time, deleted
+<==        Row: 19, 13, 有无闪退, 0, 0, 1, null, 0, 2025-12-28 15:18:36, 2025-12-28 15:18:36, 0
+<==        Row: 20, 13, 喜欢什么美食, 1, 0, 2, null, 0, 2025-12-28 15:18:36, 2025-12-28 15:18:36, 0
+<==      Total: 2
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@233678e1]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@45a43509] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,questionnaire_id,content,type,is_required,sort,max_select_num,input_type,create_time,update_time,deleted FROM question WHERE deleted=0 AND (questionnaire_id = ?) ORDER BY sort ASC
+==> Parameters: 12(Long)
+<==    Columns: id, questionnaire_id, content, type, is_required, sort, max_select_num, input_type, create_time, update_time, deleted
+<==        Row: 16, 12, 我的期望的, 0, 1, 1, null, 0, 2025-12-28 14:10:46, 2025-12-28 14:10:46, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@45a43509]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6283fc5] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,questionnaire_id,content,type,is_required,sort,max_select_num,input_type,create_time,update_time,deleted FROM question WHERE deleted=0 AND (questionnaire_id = ?) ORDER BY sort ASC
+==> Parameters: 10(Long)
+<==    Columns: id, questionnaire_id, content, type, is_required, sort, max_select_num, input_type, create_time, update_time, deleted
+<==        Row: 14, 10, 违反文案, 1, 0, 1, null, 0, 2025-12-28 13:48:38, 2025-12-28 13:48:38, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6283fc5]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@330d524c] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,questionnaire_id,content,type,is_required,sort,max_select_num,input_type,create_time,update_time,deleted FROM question WHERE deleted=0 AND (questionnaire_id = ?) ORDER BY sort ASC
+==> Parameters: 7(Long)
+<==    Columns: id, questionnaire_id, content, type, is_required, sort, max_select_num, input_type, create_time, update_time, deleted
+<==        Row: 17, 7, 人格啊, 0, 1, 1, null, 0, 2025-12-28 14:51:45, 2025-12-28 14:51:45, 0
+<==        Row: 18, 7, 太挨个, 1, 1, 2, null, 0, 2025-12-28 14:51:45, 2025-12-28 14:51:45, 0
+<==      Total: 2
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@330d524c]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5d1fe234] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,username,password,phone,email,nickname,role,points,create_time,update_time,deleted FROM sys_user WHERE deleted=0 AND (phone = ? OR username = ?)
+==> Parameters: 17836900831(String), 17836900831(String)
+<==    Columns: id, username, password, phone, email, nickname, role, points, create_time, update_time, deleted
+<==        Row: 1, 17836900831, 85bf5831e593431e882887e077400b7f, 17836900831, null, 系统管理员, 1, 0, 2025-12-28 00:39:09, 2025-12-28 18:30:58, 0
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5d1fe234]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@11dc2f6] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT COUNT( * ) AS total FROM sys_user WHERE deleted=0
+==> Parameters: 
+<==    Columns: total
+<==        Row: 4
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@11dc2f6]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6d98ff24] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT COUNT( * ) AS total FROM sys_user WHERE deleted=0 AND (create_time >= ?)
+==> Parameters: 2025-12-28T00:00:00.057692700(LocalDateTime)
+<==    Columns: total
+<==        Row: 4
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6d98ff24]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7a325e94] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT COUNT( * ) AS total FROM questionnaire WHERE deleted=0
+==> Parameters: 
+<==    Columns: total
+<==        Row: 9
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@7a325e94]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@49f93f24] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT COUNT( * ) AS total FROM questionnaire WHERE deleted=0 AND (status = ? AND audit_status = ?)
+==> Parameters: 1(Integer), 0(Integer)
+<==    Columns: total
+<==        Row: 6
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@49f93f24]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4cbb44f] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,username,password,phone,email,nickname,role,points,create_time,update_time,deleted FROM sys_user WHERE deleted=0 ORDER BY create_time DESC
+==> Parameters: 
+<==    Columns: id, username, password, phone, email, nickname, role, points, create_time, update_time, deleted
+<==        Row: 5, mama, cd314cac6c1429c6340f1620fbe2e326, 15896064947, 2681907870@qq.com, null, 0, 0, 2025-12-28 13:28:45, 2025-12-28 13:28:45, 0
+<==        Row: 4, demo, e10adc3949ba59abbe56e057f20f883e, 13900139000, null, null, 0, 0, 2025-12-28 13:08:23, 2025-12-28 13:08:23, 0
+<==        Row: 3, Raze, 9a8ba6837da0dd7acb9552017c1a6777, 19816301418, 2681907860@qq.com, null, 0, 0, 2025-12-28 01:01:44, 2025-12-28 01:01:44, 0
+<==        Row: 1, 17836900831, 85bf5831e593431e882887e077400b7f, 17836900831, null, 系统管理员, 1, 0, 2025-12-28 00:39:09, 2025-12-28 18:30:58, 0
+<==      Total: 4
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4cbb44f]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4f8b3e98] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,username,password,phone,email,nickname,role,points,create_time,update_time,deleted FROM sys_user WHERE deleted=0 ORDER BY create_time DESC
+==> Parameters: 
+<==    Columns: id, username, password, phone, email, nickname, role, points, create_time, update_time, deleted
+<==        Row: 5, mama, cd314cac6c1429c6340f1620fbe2e326, 15896064947, 2681907870@qq.com, null, 0, 0, 2025-12-28 13:28:45, 2025-12-28 13:28:45, 0
+<==        Row: 4, demo, e10adc3949ba59abbe56e057f20f883e, 13900139000, null, null, 0, 0, 2025-12-28 13:08:23, 2025-12-28 13:08:23, 0
+<==        Row: 3, Raze, 9a8ba6837da0dd7acb9552017c1a6777, 19816301418, 2681907860@qq.com, null, 0, 0, 2025-12-28 01:01:44, 2025-12-28 01:01:44, 0
+<==        Row: 1, 17836900831, 85bf5831e593431e882887e077400b7f, 17836900831, null, 系统管理员, 1, 0, 2025-12-28 00:39:09, 2025-12-28 18:30:58, 0
+<==      Total: 4
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@4f8b3e98]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6ffd4313] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT COUNT( * ) AS total FROM sys_user WHERE deleted=0
+==> Parameters: 
+<==    Columns: total
+<==        Row: 4
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6ffd4313]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@473cec3d] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT COUNT( * ) AS total FROM sys_user WHERE deleted=0 AND (create_time >= ?)
+==> Parameters: 2025-12-28T00:00:00.331463700(LocalDateTime)
+<==    Columns: total
+<==        Row: 4
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@473cec3d]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6e8e0f29] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT COUNT( * ) AS total FROM questionnaire WHERE deleted=0
+==> Parameters: 
+<==    Columns: total
+<==        Row: 9
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@6e8e0f29]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5a2d1d2d] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT COUNT( * ) AS total FROM questionnaire WHERE deleted=0 AND (status = ? AND audit_status = ?)
+==> Parameters: 1(Integer), 0(Integer)
+<==    Columns: total
+<==        Row: 6
+<==      Total: 1
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@5a2d1d2d]
+Creating a new SqlSession
+SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2fea6129] was not registered for synchronization because synchronization is not active
+JDBC Connection [com.mysql.cj.jdbc.ConnectionImpl@5bcf3036] will not be managed by Spring
+==>  Preparing: SELECT id,username,password,phone,email,nickname,role,points,create_time,update_time,deleted FROM sys_user WHERE deleted=0 ORDER BY create_time DESC
+==> Parameters: 
+<==    Columns: id, username, password, phone, email, nickname, role, points, create_time, update_time, deleted
+<==        Row: 5, mama, cd314cac6c1429c6340f1620fbe2e326, 15896064947, 2681907870@qq.com, null, 0, 0, 2025-12-28 13:28:45, 2025-12-28 13:28:45, 0
+<==        Row: 4, demo, e10adc3949ba59abbe56e057f20f883e, 13900139000, null, null, 0, 0, 2025-12-28 13:08:23, 2025-12-28 13:08:23, 0
+<==        Row: 3, Raze, 9a8ba6837da0dd7acb9552017c1a6777, 19816301418, 2681907860@qq.com, null, 0, 0, 2025-12-28 01:01:44, 2025-12-28 01:01:44, 0
+<==        Row: 1, 17836900831, 85bf5831e593431e882887e077400b7f, 17836900831, null, 系统管理员, 1, 0, 2025-12-28 00:39:09, 2025-12-28 18:30:58, 0
+<==      Total: 4
+Closing non transactional SqlSession [org.apache.ibatis.session.defaults.DefaultSqlSession@2fea6129]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  03:26 h
+[INFO] Finished at: 2025-12-28T20:36:15+08:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.springframework.boot:spring-boot-maven-plugin:2.7.18:run (default-cli) on project questionnaire-backend: Application finished with exit code: 1 -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException

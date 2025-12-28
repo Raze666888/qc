@@ -53,12 +53,25 @@ public class AnswerService {
             throw new BusinessException("问卷已截止");
         }
 
-        // 检查IP是否已填写(简单实现)
-        LambdaQueryWrapper<Answer> checkWrapper = new LambdaQueryWrapper<>();
-        checkWrapper.eq(Answer::getQuestionnaireId, answerDTO.getQuestionnaireId())
-                   .eq(Answer::getRespondentIp, answerDTO.getRespondentIp());
-        if (answerMapper.selectCount(checkWrapper) > 0) {
-            throw new BusinessException("您已经填写过该问卷");
+        // 检查是否已填写过问卷
+        // 优先使用userId检查（针对已登录用户）
+        if (answerDTO.getUserId() != null) {
+            LambdaQueryWrapper<Answer> userCheckWrapper = new LambdaQueryWrapper<>();
+            userCheckWrapper.eq(Answer::getQuestionnaireId, answerDTO.getQuestionnaireId())
+                          .eq(Answer::getUserId, answerDTO.getUserId())
+                          .eq(Answer::getDeleted, 0);
+            if (answerMapper.selectCount(userCheckWrapper) > 0) {
+                throw new BusinessException("您已经填写过该问卷");
+            }
+        } else {
+            // 未登录用户，使用IP地址检查（简单限制）
+            LambdaQueryWrapper<Answer> ipCheckWrapper = new LambdaQueryWrapper<>();
+            ipCheckWrapper.eq(Answer::getQuestionnaireId, answerDTO.getQuestionnaireId())
+                         .eq(Answer::getRespondentIp, answerDTO.getRespondentIp())
+                         .eq(Answer::getDeleted, 0);
+            if (answerMapper.selectCount(ipCheckWrapper) > 0) {
+                throw new BusinessException("您已经填写过该问卷");
+            }
         }
 
         // 创建答卷

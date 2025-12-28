@@ -1,0 +1,42 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------< com.qc:questionnaire-backend >--------------------
+[INFO] Building questionnaire-backend 1.0.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.2.0:clean (default-clean) @ questionnaire-backend ---
+[INFO] Deleting C:\Users\26819\Documents\GitHub\qc\qc-front\qc-backend\target
+[INFO] 
+[INFO] --- maven-resources-plugin:3.2.0:resources (default-resources) @ questionnaire-backend ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Using 'UTF-8' encoding to copy filtered properties files.
+[INFO] Copying 1 resource
+[INFO] Copying 3 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.10.1:compile (default-compile) @ questionnaire-backend ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 51 source files to C:\Users\26819\Documents\GitHub\qc\qc-front\qc-backend\target\classes
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /C:/Users/26819/Documents/GitHub/qc/qc-front/qc-backend/src/main/java/com/qc/controller/AdminController.java:[373,48] 需要')'
+[ERROR] /C:/Users/26819/Documents/GitHub/qc/qc-front/qc-backend/src/main/java/com/qc/controller/AdminController.java:[425,48] 需要')'
+[INFO] 2 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.345 s
+[INFO] Finished at: 2025-12-28T20:28:29+08:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.10.1:compile (default-compile) on project questionnaire-backend: Compilation failure: Compilation failure: 
+[ERROR] /C:/Users/26819/Documents/GitHub/qc/qc-front/qc-backend/src/main/java/com/qc/controller/AdminController.java:[373,48] 需要')'
+[ERROR] /C:/Users/26819/Documents/GitHub/qc/qc-front/qc-backend/src/main/java/com/qc/controller/AdminController.java:[425,48] 需要')'
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

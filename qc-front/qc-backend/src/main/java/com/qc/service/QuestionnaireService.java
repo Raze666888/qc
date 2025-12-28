@@ -34,6 +34,9 @@ public class QuestionnaireService {
     @Autowired
     private QuestionOptionMapper questionOptionMapper;
 
+    @Autowired
+    private UserMapper userMapper;
+
     private static final Map<Integer, String> CATEGORY_MAP = new HashMap<Integer, String>() {{
         put(1, "学术科研");
         put(2, "生活消费");
@@ -333,6 +336,48 @@ public class QuestionnaireService {
         return new PageResult<>(result.getTotal(), records);
     }
 
+    public PageResult<QuestionnaireVO> getPublicQuestionnairePage(Integer pageNum, Integer pageSize, Integer category, String sortBy) {
+        // 手动查询并分页，避免使用 answerCount 字段排序
+        LambdaQueryWrapper<Questionnaire> wrapper = new LambdaQueryWrapper<>();
+        wrapper.eq(Questionnaire::getStatus, 1);
+
+        if (category != null && category > 0) {
+            wrapper.eq(Questionnaire::getCategory, category);
+        }
+
+        // 按创建时间倒序排列
+        wrapper.orderByDesc(Questionnaire::getCreateTime);
+
+        Page<Questionnaire> page = new Page<>(pageNum, pageSize);
+        Page<Questionnaire> result = questionnaireMapper.selectPage(page, wrapper);
+
+        // 转换为 VO 并加载问题列表
+        List<QuestionnaireVO> voList = result.getRecords().stream().map(q -> {
+            QuestionnaireVO vo = new QuestionnaireVO();
+            BeanUtils.copyProperties(q, vo);
+            vo.setCategoryName(CATEGORY_MAP.get(q.getCategory()));
+
+            // 查询问题列表
+            LambdaQueryWrapper<Question> questionWrapper = new LambdaQueryWrapper<>();
+            questionWrapper.eq(Question::getQuestionnaireId, q.getId())
+                          .orderByAsc(Question::getSort);
+            List<Question> questions = questionMapper.selectList(questionWrapper);
+
+            List<QuestionVO> questionVOList = new ArrayList<>();
+            for (Question question : questions) {
+                QuestionVO questionVO = new QuestionVO();
+                BeanUtils.copyProperties(question, questionVO);
+                questionVO.setTypeName(QUESTION_TYPE_MAP.get(question.getType()));
+                questionVOList.add(questionVO);
+            }
+
+            vo.setQuestions(questionVOList);
+            return vo;
+        }).collect(Collectors.toList());
+
+        return new PageResult<>(result.getTotal(), voList);
+    }
+
     public QuestionnaireVO getQuestionnaireDetail(Long id) {
         Questionnaire questionnaire = questionnaireMapper.selectById(id);
         if (questionnaire == null) {
@@ -375,45 +420,94 @@ public class QuestionnaireService {
         return vo;
     }
 
-    public PageResult<QuestionnaireVO> getPublicQuestionnairePage(Integer pageNum, Integer pageSize, Integer category, String sortBy) {
-        // 手动查询并分页，避免使用 answerCount 字段排序
-        LambdaQueryWrapper<Questionnaire> wrapper = new LambdaQueryWrapper<>();
-        wrapper.eq(Questionnaire::getStatus, 1);
+    // ==================== 管理员方法 ====================
 
-        if (category != null && category > 0) {
-            wrapper.eq(Questionnaire::getCategory, category);
+    /**
+     * 管理员分页查询问卷
+     */
+    public IPage<QuestionnaireVO> getAdminQuestionnairePage(Integer pageNum, Integer pageSize,
+                                                       String keyword, Integer status, Integer auditStatus) {
+        Page<Questionnaire> page = new Page<>(pageNum, pageSize);
+        LambdaQueryWrapper<Questionnaire> wrapper = new LambdaQueryWrapper<>();
+
+        // 关键词搜索
+        if (keyword != null && !keyword.isEmpty()) {
+            wrapper.and(w -> w.like(Questionnaire::getTitle, keyword)
+                    .or().like(Questionnaire::getDescription, keyword));
         }
 
-        // 按创建时间倒序排列
-        wrapper.orderByDesc(Questionnaire::getCreateTime);
+        // 状态筛选
+        if (status != null) {
+            wrapper.eq(Questionnaire::getStatus, status);
+        }
 
-        Page<Questionnaire> page = new Page<>(pageNum, pageSize);
-        Page<Questionnaire> result = questionnaireMapper.selectPage(page, wrapper);
+        // 审核状态筛选
+        if (auditStatus != null) {
+            wrapper.eq(Questionnaire::getAuditStatus, auditStatus);
+        }
 
-        // 转换为 VO 并加载问题列表
-        List<QuestionnaireVO> voList = result.getRecords().stream().map(q -> {
+        wrapper.eq(Questionnaire::getDeleted, 0)
+               .orderByDesc(Questionnaire::getCreateTime);
+
+        IPage<Questionnaire> result = questionnaireMapper.selectPage(page, wrapper);
+
+        return result.convert(q -> {
             QuestionnaireVO vo = new QuestionnaireVO();
             BeanUtils.copyProperties(q, vo);
             vo.setCategoryName(CATEGORY_MAP.get(q.getCategory()));
-
-            // 查询问题列表
-            LambdaQueryWrapper<Question> questionWrapper = new LambdaQueryWrapper<>();
-            questionWrapper.eq(Question::getQuestionnaireId, q.getId())
-                          .orderByAsc(Question::getSort);
-            List<Question> questions = questionMapper.selectList(questionWrapper);
-
-            List<QuestionVO> questionVOList = new ArrayList<>();
-            for (Question question : questions) {
-                QuestionVO questionVO = new QuestionVO();
-                BeanUtils.copyProperties(question, questionVO);
-                questionVO.setTypeName(QUESTION_TYPE_MAP.get(question.getType()));
-                questionVOList.add(questionVO);
-            }
-
-            vo.setQuestions(questionVOList);
             return vo;
-        }).collect(Collectors.toList());
+        });
+    }
 
-        return new PageResult<>(result.getTotal(), voList);
+    /**
+     * 获取问卷详情（包含问题和选项）- 用于管理员查看
+     */
+    public com.qc.vo.QuestionnaireDetailVO getQuestionnaireDetailAdmin(Long id) {
+        Questionnaire questionnaire = questionnaireMapper.selectById(id);
+        if (questionnaire == null || questionnaire.getDeleted() == 1) {
+            throw new BusinessException("问卷不存在");
+        }
+
+        // 查询创建者信息
+        com.qc.entity.User user = userMapper.selectById(questionnaire.getUserId());
+
+        com.qc.vo.QuestionnaireDetailVO vo = new com.qc.vo.QuestionnaireDetailVO();
+        BeanUtils.copyProperties(questionnaire, vo);
+        if (user != null) {
+            vo.setUsername(user.getUsername());
+            vo.setNickname(user.getNickname());
+        }
+
+        // 查询问题列表
+        LambdaQueryWrapper<Question> questionWrapper = new LambdaQueryWrapper<>();
+        questionWrapper.eq(Question::getQuestionnaireId, id)
+                       .eq(Question::getDeleted, 0)
+                       .orderByAsc(Question::getSort);
+        List<Question> questions = questionMapper.selectList(questionWrapper);
+
+        List<com.qc.vo.QuestionVO> questionVOList = new ArrayList<>();
+        for (Question question : questions) {
+            com.qc.vo.QuestionVO questionVO = new com.qc.vo.QuestionVO();
+            BeanUtils.copyProperties(question, questionVO);
+
+            // 查询选项列表
+            LambdaQueryWrapper<QuestionOption> optionWrapper = new LambdaQueryWrapper<>();
+            optionWrapper.eq(QuestionOption::getQuestionId, question.getId())
+                        .eq(QuestionOption::getDeleted, 0)
+                        .orderByAsc(QuestionOption::getSort);
+            List<QuestionOption> options = questionOptionMapper.selectList(optionWrapper);
+
+            List<com.qc.vo.OptionVO> optionVOList = options.stream().map(opt -> {
+                com.qc.vo.OptionVO optionVO = new com.qc.vo.OptionVO();
+                BeanUtils.copyProperties(opt, optionVO);
+                return optionVO;
+            }).collect(Collectors.toList());
+
+            questionVO.setOptions(optionVOList);
+            questionVOList.add(questionVO);
+        }
+
+        vo.setQuestions(questionVOList);
+        return vo;
     }
 }
