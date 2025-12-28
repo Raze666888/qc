@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 import java.util.Map;
 
 @Slf4j
@@ -120,8 +121,16 @@ public class QuestionnaireController {
             @RequestParam(defaultValue = "1") Integer pageNum,
             @RequestParam(defaultValue = "12") Integer pageSize,
             @RequestParam(required = false) Integer category,
-            @RequestParam(required = false) String sortBy) {
-        PageResult<QuestionnaireVO> result = questionnaireService.getPublicQuestionnairePage(pageNum, pageSize, category, sortBy);
+            @RequestParam(required = false) String sortBy,
+            @RequestParam(required = false) String keyword) {
+        PageResult<QuestionnaireVO> result = questionnaireService.getPublicQuestionnairePage(pageNum, pageSize, category, sortBy, keyword);
+        return Result.success(result);
+    }
+
+    // 获取热门问卷（用于首页轮播图，按答卷数量排序的前3名）
+    @GetMapping("/public/hot")
+    public Result<List<QuestionnaireVO>> getHotQuestionnaires() {
+        List<QuestionnaireVO> result = questionnaireService.getHotQuestionnaires(3);
         return Result.success(result);
     }
 }

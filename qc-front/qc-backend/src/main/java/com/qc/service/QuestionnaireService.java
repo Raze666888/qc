@@ -37,6 +37,9 @@ public class QuestionnaireService {
     @Autowired
     private UserMapper userMapper;
 
+    @Autowired
+    private AnswerMapper answerMapper;
+
     private static final Map<Integer, String> CATEGORY_MAP = new HashMap<Integer, String>() {{
         put(1, "学术科研");
         put(2, "生活消费");
@@ -301,6 +304,12 @@ public class QuestionnaireService {
         List<QuestionnaireVO> records = result.getRecords().stream().map(qvo -> {
             qvo.setCategoryName(CATEGORY_MAP.get(qvo.getCategory()));
 
+            // 统计该问卷的答卷数量
+            LambdaQueryWrapper<Answer> answerWrapper = new LambdaQueryWrapper<>();
+            answerWrapper.eq(Answer::getQuestionnaireId, qvo.getId());
+            Integer answerCount = Math.toIntExact(answerMapper.selectCount(answerWrapper));
+            qvo.setAnswerCount(answerCount);
+
             // 加载问题列表
             LambdaQueryWrapper<Question> questionWrapper = new LambdaQueryWrapper<>();
             questionWrapper.eq(Question::getQuestionnaireId, qvo.getId())
@@ -336,13 +345,18 @@ public class QuestionnaireService {
         return new PageResult<>(result.getTotal(), records);
     }
 
-    public PageResult<QuestionnaireVO> getPublicQuestionnairePage(Integer pageNum, Integer pageSize, Integer category, String sortBy) {
+    public PageResult<QuestionnaireVO> getPublicQuestionnairePage(Integer pageNum, Integer pageSize, Integer category, String sortBy, String keyword) {
         // 手动查询并分页，避免使用 answerCount 字段排序
         LambdaQueryWrapper<Questionnaire> wrapper = new LambdaQueryWrapper<>();
         wrapper.eq(Questionnaire::getStatus, 1);
 
         if (category != null && category > 0) {
             wrapper.eq(Questionnaire::getCategory, category);
+        }
+
+        // 添加标题关键词搜索
+        if (keyword != null && !keyword.trim().isEmpty()) {
+            wrapper.like(Questionnaire::getTitle, keyword.trim());
         }
 
         // 按创建时间倒序排列
@@ -356,6 +370,12 @@ public class QuestionnaireService {
             QuestionnaireVO vo = new QuestionnaireVO();
             BeanUtils.copyProperties(q, vo);
             vo.setCategoryName(CATEGORY_MAP.get(q.getCategory()));
+
+            // 统计该问卷的答卷数量
+            LambdaQueryWrapper<Answer> answerWrapper = new LambdaQueryWrapper<>();
+            answerWrapper.eq(Answer::getQuestionnaireId, q.getId());
+            Integer answerCount = Math.toIntExact(answerMapper.selectCount(answerWrapper));
+            vo.setAnswerCount(answerCount);
 
             // 查询问题列表
             LambdaQueryWrapper<Question> questionWrapper = new LambdaQueryWrapper<>();
@@ -388,6 +408,12 @@ public class QuestionnaireService {
         BeanUtils.copyProperties(questionnaire, vo);
         vo.setCategoryName(CATEGORY_MAP.get(questionnaire.getCategory()));
 
+        // 统计该问卷的答卷数量
+        LambdaQueryWrapper<Answer> answerWrapper = new LambdaQueryWrapper<>();
+        answerWrapper.eq(Answer::getQuestionnaireId, id);
+        Integer answerCount = Math.toIntExact(answerMapper.selectCount(answerWrapper));
+        vo.setAnswerCount(answerCount);
+
         // 查询问题列表
         LambdaQueryWrapper<Question> questionWrapper = new LambdaQueryWrapper<>();
         questionWrapper.eq(Question::getQuestionnaireId, id)
@@ -418,6 +444,41 @@ public class QuestionnaireService {
 
         vo.setQuestions(questionVOList);
         return vo;
+    }
+
+    /**
+     * 获取热门问卷（按答卷数量排序）
+     * @param limit 获取数量
+     * @return 热门问卷列表
+     */
+    public List<QuestionnaireVO> getHotQuestionnaires(Integer limit) {
+        // 查询所有已发布的问卷
+        LambdaQueryWrapper<Questionnaire> wrapper = new LambdaQueryWrapper<>();
+        wrapper.eq(Questionnaire::getStatus, 1); // 只查询已发布的问卷
+
+        List<Questionnaire> questionnaires = questionnaireMapper.selectList(wrapper);
+
+        // 统计每个问卷的答卷数量并排序
+        List<QuestionnaireVO> voList = questionnaires.stream().map(q -> {
+            QuestionnaireVO vo = new QuestionnaireVO();
+            BeanUtils.copyProperties(q, vo);
+            vo.setCategoryName(CATEGORY_MAP.get(q.getCategory()));
+
+            // 统计该问卷的答卷数量
+            LambdaQueryWrapper<Answer> answerWrapper = new LambdaQueryWrapper<>();
+            answerWrapper.eq(Answer::getQuestionnaireId, q.getId());
+            Integer answerCount = Math.toIntExact(answerMapper.selectCount(answerWrapper));
+            vo.setAnswerCount(answerCount);
+
+            return vo;
+        }).sorted((q1, q2) -> {
+            // 按答卷数量降序排序
+            Integer count1 = q1.getAnswerCount() != null ? q1.getAnswerCount() : 0;
+            Integer count2 = q2.getAnswerCount() != null ? q2.getAnswerCount() : 0;
+            return count2.compareTo(count1);
+        }).limit(limit).collect(Collectors.toList());
+
+        return voList;
     }
 
     // ==================== 管理员方法 ====================
