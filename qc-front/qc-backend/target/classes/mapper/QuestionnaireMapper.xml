@@ -15,6 +15,7 @@
             q.audit_status,
             q.link,
             q.create_time,
+            (SELECT COUNT(*) FROM question qu WHERE qu.questionnaire_id = q.id AND qu.deleted = 0) as question_count,
             (SELECT COUNT(*) FROM answer a WHERE a.questionnaire_id = q.id AND a.deleted = 0) as answer_count
         FROM questionnaire q
         WHERE q.deleted = 0

@@ -95,6 +95,8 @@ public class QuestionnaireController {
     public Result<PageResult<QuestionnaireVO>> page(
             HttpServletRequest request,
             @RequestParam(required = false) Integer status,
+            @RequestParam(required = false) Integer category,
+            @RequestParam(required = false) String keyword,
             @RequestParam(defaultValue = "1") Integer pageNum,
             @RequestParam(defaultValue = "20") Integer pageSize) {
         Long userId = getUserIdFromRequest(request);

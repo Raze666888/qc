@@ -193,29 +193,28 @@ public class AnswerService {
 
                     Map<String, Object> optionStat = new HashMap<>();
                     optionStat.put("optionId", option.getId());
-                    optionStat.put("content", option.getContent());
-                    optionStat.put("selectCount", selectCount);
+                    optionStat.put("optionContent", option.getContent());  // 前端期望的字段名
+                    optionStat.put("count", selectCount);  // 前端期望的字段名
 
                     if (totalAnswers > 0) {
                         double percentage = (selectCount * 100.0) / totalAnswers;
-                        optionStat.put("percentage", String.format("%.2f", percentage));
+                        optionStat.put("percentage", Math.round(percentage));  // 前端期望整数百分比
                     } else {
-                        optionStat.put("percentage", "0.00");
+                        optionStat.put("percentage", 0);
                     }
 
                     optionStats.add(optionStat);
                 }
 
-                stat.put("options", optionStats);
+                stat.put("optionStats", optionStats);  // 前端期望的字段名
             }
 
             questionStats.add(stat);
         }
 
         Map<String, Object> result = new HashMap<>();
-        result.put("questionnaireTitle", questionnaire.getTitle());
         result.put("totalAnswers", totalAnswers);
-        result.put("questions", questionStats);
+        result.put("questionStats", questionStats);  // 前端期望的字段名
 
         return result;
     }

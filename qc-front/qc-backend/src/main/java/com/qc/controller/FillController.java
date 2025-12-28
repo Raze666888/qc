@@ -6,6 +6,7 @@ import com.qc.mapper.QuestionMapper;
 import com.qc.mapper.QuestionOptionMapper;
 import com.qc.mapper.QuestionnaireMapper;
 import com.qc.service.AnswerService;
+import com.qc.utils.JwtUtil;
 import com.qc.vo.OptionVO;
 import com.qc.vo.QuestionVO;
 import com.qc.vo.QuestionnaireVO;
@@ -35,6 +36,9 @@ public class FillController {
     @Autowired
     private AnswerService answerService;
 
+    @Autowired
+    private JwtUtil jwtUtil;
+
     @GetMapping("/{id}")
     public Result<QuestionnaireVO> getFillQuestionnaire(@PathVariable Long id) {
         Questionnaire questionnaire = questionnaireMapper.selectById(id);
@@ -50,6 +54,8 @@ public class FillController {
         vo.setId(questionnaire.getId());
         vo.setTitle(questionnaire.getTitle());
         vo.setDescription(questionnaire.getDescription());
+        vo.setStatus(questionnaire.getStatus());
+        vo.setDeadline(questionnaire.getDeadline());
         vo.setIsAnonymous(questionnaire.getIsAnonymous());
 
         // 查询问题列表
@@ -97,6 +103,16 @@ public class FillController {
         // 获取客户端IP
         String ip = getClientIp(request);
         answerDTO.setRespondentIp(ip);
+
+        // 获取用户ID（如果已登录）
+        String token = request.getHeader("Authorization");
+        if (token != null && token.startsWith("Bearer ")) {
+            token = token.substring(7);
+            Long userId = jwtUtil.getUserIdFromToken(token);
+            if (userId != null) {
+                answerDTO.setUserId(userId);
+            }
+        }
 
         Long id = answerService.submitAnswer(answerDTO);
         return Result.success(id);

@@ -16,6 +16,8 @@ public class AnswerDTO {
 
     private String respondentIp;
 
+    private Long userId;  // 添加用户ID字段
+
     @NotEmpty(message = "答题详情不能为空")
     private List<AnswerDetailDTO> details;
 }

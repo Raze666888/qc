@@ -18,6 +18,8 @@ public class Answer {
 
     private String respondentIp;
 
+    private Long userId;  // 添加用户ID字段
+
     @TableField(fill = FieldFill.INSERT)
     private LocalDateTime createTime;
 

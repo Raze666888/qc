@@ -18,6 +18,7 @@ public class QuestionnaireVO {
     private Integer auditStatus;
     private String link;
     private LocalDateTime createTime;
+    private LocalDateTime answerTime;  // 添加填写时间字段
     private Integer answerCount;
     private List<QuestionVO> questions;
 }

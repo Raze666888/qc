@@ -297,6 +297,36 @@ public class QuestionnaireService {
 
         List<QuestionnaireVO> records = result.getRecords().stream().map(qvo -> {
             qvo.setCategoryName(CATEGORY_MAP.get(qvo.getCategory()));
+
+            // 加载问题列表
+            LambdaQueryWrapper<Question> questionWrapper = new LambdaQueryWrapper<>();
+            questionWrapper.eq(Question::getQuestionnaireId, qvo.getId())
+                          .orderByAsc(Question::getSort);
+            List<Question> questions = questionMapper.selectList(questionWrapper);
+
+            List<QuestionVO> questionVOList = new ArrayList<>();
+            for (Question question : questions) {
+                QuestionVO questionVO = new QuestionVO();
+                BeanUtils.copyProperties(question, questionVO);
+                questionVO.setTypeName(QUESTION_TYPE_MAP.get(question.getType()));
+
+                // 加载选项列表
+                LambdaQueryWrapper<QuestionOption> optionWrapper = new LambdaQueryWrapper<>();
+                optionWrapper.eq(QuestionOption::getQuestionId, question.getId())
+                            .orderByAsc(QuestionOption::getSort);
+                List<QuestionOption> options = questionOptionMapper.selectList(optionWrapper);
+
+                List<OptionVO> optionVOList = options.stream().map(opt -> {
+                    OptionVO optionVO = new OptionVO();
+                    BeanUtils.copyProperties(opt, optionVO);
+                    return optionVO;
+                }).collect(Collectors.toList());
+
+                questionVO.setOptions(optionVOList);
+                questionVOList.add(questionVO);
+            }
+
+            qvo.setQuestions(questionVOList);
             return qvo;
         }).collect(Collectors.toList());
 
