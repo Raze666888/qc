@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qc.mapper.QuestionnaireMapper">
+
+    <select id="selectQuestionnairePage" resultType="com.qc.vo.QuestionnaireVO">
+        SELECT
+            q.id,
+            q.user_id,
+            q.title,
+            q.description,
+            q.category,
+            q.deadline,
+            q.is_anonymous,
+            q.status,
+            q.audit_status,
+            q.link,
+            q.create_time,
+            (SELECT COUNT(*) FROM answer a WHERE a.questionnaire_id = q.id AND a.deleted = 0) as answer_count
+        FROM questionnaire q
+        WHERE q.deleted = 0
+        <if test="userId != null">
+            AND q.user_id = #{userId}
+        </if>
+        <if test="status != null">
+            AND q.status = #{status}
+        </if>
+        ORDER BY q.create_time DESC
+    </select>
+
+</mapper>
