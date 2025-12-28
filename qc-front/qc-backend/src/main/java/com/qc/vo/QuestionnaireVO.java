@@ -12,7 +12,10 @@ public class QuestionnaireVO {
     private String description;
     private Integer category;
     private String categoryName;
+
+    @com.baomidou.mybatisplus.annotation.TableField("deadline")
     private LocalDateTime deadline;
+
     private Integer isAnonymous;
     private Integer status;
     private Integer auditStatus;

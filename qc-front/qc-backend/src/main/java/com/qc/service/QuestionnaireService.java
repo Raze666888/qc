@@ -70,12 +70,16 @@ public class QuestionnaireService {
             questionnaire.setTitle(questionnaireData.get("title") != null ? questionnaireData.get("title").toString() : "");
             questionnaire.setDescription(questionnaireData.get("description") != null ? questionnaireData.get("description").toString() : null);
             questionnaire.setCategory(questionnaireData.get("category") != null ? Integer.valueOf(questionnaireData.get("category").toString()) : null);
-            // 处理 deadline 字段
+            // 处理 deadline 字段 - 支持格式: YYYY-MM-DD HH:mm:ss
             if (questionnaireData.get("deadline") != null && !questionnaireData.get("deadline").toString().isEmpty()) {
                 try {
-                    questionnaire.setDeadline(java.time.LocalDateTime.parse(questionnaireData.get("deadline").toString()));
+                    String deadlineStr = questionnaireData.get("deadline").toString();
+                    // 使用 DateTimeFormatter 解析前端发送的格式
+                    java.time.format.DateTimeFormatter formatter = java.time.format.DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+                    questionnaire.setDeadline(java.time.LocalDateTime.parse(deadlineStr, formatter));
+                    log.info("截止时间解析成功: {}", deadlineStr);
                 } catch (Exception e) {
-                    log.warn("日期解析失败: {}", questionnaireData.get("deadline"));
+                    log.error("日期解析失败: {}, 错误: {}", questionnaireData.get("deadline"), e.getMessage());
                 }
             }
             questionnaire.setIsAnonymous(questionnaireData.get("isAnonymous") != null ? Integer.valueOf(questionnaireData.get("isAnonymous").toString()) : 0);
@@ -127,11 +131,16 @@ public class QuestionnaireService {
         if (questionnaireData.get("category") != null) {
             questionnaire.setCategory(Integer.valueOf(questionnaireData.get("category").toString()));
         }
+        // 处理 deadline 字段 - 支持格式: YYYY-MM-DD HH:mm:ss
         if (questionnaireData.get("deadline") != null && !questionnaireData.get("deadline").toString().isEmpty()) {
             try {
-                questionnaire.setDeadline(java.time.LocalDateTime.parse(questionnaireData.get("deadline").toString()));
+                String deadlineStr = questionnaireData.get("deadline").toString();
+                // 使用 DateTimeFormatter 解析前端发送的格式
+                java.time.format.DateTimeFormatter formatter = java.time.format.DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+                questionnaire.setDeadline(java.time.LocalDateTime.parse(deadlineStr, formatter));
+                log.info("截止时间更新成功: {}", deadlineStr);
             } catch (Exception e) {
-                log.warn("日期解析失败: {}", questionnaireData.get("deadline"));
+                log.error("日期解析失败: {}, 错误: {}", questionnaireData.get("deadline"), e.getMessage());
             }
         } else {
             questionnaire.setDeadline(null);
@@ -371,6 +380,8 @@ public class QuestionnaireService {
             BeanUtils.copyProperties(q, vo);
             vo.setCategoryName(CATEGORY_MAP.get(q.getCategory()));
 
+            log.info("首页问卷列表: id={}, title={}, deadline={}", q.getId(), q.getTitle(), q.getDeadline());
+
             // 统计该问卷的答卷数量
             LambdaQueryWrapper<Answer> answerWrapper = new LambdaQueryWrapper<>();
             answerWrapper.eq(Answer::getQuestionnaireId, q.getId());
@@ -404,9 +415,13 @@ public class QuestionnaireService {
             throw new BusinessException("问卷不存在");
         }
 
+        log.info("查询到问卷: id={}, title={}, deadline={}", questionnaire.getId(), questionnaire.getTitle(), questionnaire.getDeadline());
+
         QuestionnaireVO vo = new QuestionnaireVO();
         BeanUtils.copyProperties(questionnaire, vo);
         vo.setCategoryName(CATEGORY_MAP.get(questionnaire.getCategory()));
+
+        log.info("VO中deadline字段: {}", vo.getDeadline());
 
         // 统计该问卷的答卷数量
         LambdaQueryWrapper<Answer> answerWrapper = new LambdaQueryWrapper<>();

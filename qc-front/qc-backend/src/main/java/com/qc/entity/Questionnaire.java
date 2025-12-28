@@ -18,6 +18,7 @@ public class Questionnaire {
 
     private Integer category;
 
+    @TableField("deadline")
     private LocalDateTime deadline;
 
     private Integer isAnonymous;
