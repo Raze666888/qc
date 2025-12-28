@@ -36,4 +36,7 @@ public class Questionnaire {
 
     @TableLogic
     private Integer deleted;
+
+    @TableField(exist = false)
+    private Integer answerCount;
 }

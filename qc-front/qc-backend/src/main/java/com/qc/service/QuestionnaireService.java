@@ -344,4 +344,46 @@ public class QuestionnaireService {
         vo.setQuestions(questionVOList);
         return vo;
     }
+
+    public PageResult<QuestionnaireVO> getPublicQuestionnairePage(Integer pageNum, Integer pageSize, Integer category, String sortBy) {
+        // 手动查询并分页，避免使用 answerCount 字段排序
+        LambdaQueryWrapper<Questionnaire> wrapper = new LambdaQueryWrapper<>();
+        wrapper.eq(Questionnaire::getStatus, 1);
+
+        if (category != null && category > 0) {
+            wrapper.eq(Questionnaire::getCategory, category);
+        }
+
+        // 按创建时间倒序排列
+        wrapper.orderByDesc(Questionnaire::getCreateTime);
+
+        Page<Questionnaire> page = new Page<>(pageNum, pageSize);
+        Page<Questionnaire> result = questionnaireMapper.selectPage(page, wrapper);
+
+        // 转换为 VO 并加载问题列表
+        List<QuestionnaireVO> voList = result.getRecords().stream().map(q -> {
+            QuestionnaireVO vo = new QuestionnaireVO();
+            BeanUtils.copyProperties(q, vo);
+            vo.setCategoryName(CATEGORY_MAP.get(q.getCategory()));
+
+            // 查询问题列表
+            LambdaQueryWrapper<Question> questionWrapper = new LambdaQueryWrapper<>();
+            questionWrapper.eq(Question::getQuestionnaireId, q.getId())
+                          .orderByAsc(Question::getSort);
+            List<Question> questions = questionMapper.selectList(questionWrapper);
+
+            List<QuestionVO> questionVOList = new ArrayList<>();
+            for (Question question : questions) {
+                QuestionVO questionVO = new QuestionVO();
+                BeanUtils.copyProperties(question, questionVO);
+                questionVO.setTypeName(QUESTION_TYPE_MAP.get(question.getType()));
+                questionVOList.add(questionVO);
+            }
+
+            vo.setQuestions(questionVOList);
+            return vo;
+        }).collect(Collectors.toList());
+
+        return new PageResult<>(result.getTotal(), voList);
+    }
 }

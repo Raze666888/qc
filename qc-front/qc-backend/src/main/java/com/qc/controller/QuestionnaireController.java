@@ -111,4 +111,15 @@ public class QuestionnaireController {
         QuestionnaireVO vo = questionnaireService.getQuestionnaireDetail(id);
         return Result.success(vo);
     }
+
+    // 获取公开的问卷列表（无需登录）
+    @GetMapping("/public/list")
+    public Result<PageResult<QuestionnaireVO>> publicList(
+            @RequestParam(defaultValue = "1") Integer pageNum,
+            @RequestParam(defaultValue = "12") Integer pageSize,
+            @RequestParam(required = false) Integer category,
+            @RequestParam(required = false) String sortBy) {
+        PageResult<QuestionnaireVO> result = questionnaireService.getPublicQuestionnairePage(pageNum, pageSize, category, sortBy);
+        return Result.success(result);
+    }
 }

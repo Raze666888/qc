@@ -99,6 +99,6 @@ CREATE TABLE IF NOT EXISTS answer_detail (
 
 -- 插入测试管理员账号
 INSERT INTO sys_user (username, password, phone, nickname, role)
-VALUES ('admin', '21232f297a57a5a743894a0e4a801fc3', '13800138000', '系统管理员', 1)
+VALUES ('123456', 'e10adc3949ba59abbe56e057f20f883e', '13800138000', '系统管理员', 1)
 ON DUPLICATE KEY UPDATE username = username;
--- 默认密码: admin
+-- 默认密码: qq123456

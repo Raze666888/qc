@@ -80,6 +80,7 @@ public class FillController {
                 OptionVO optionVO = new OptionVO();
                 optionVO.setId(option.getId());
                 optionVO.setContent(option.getContent());
+                optionVO.setJumpQuestionId(option.getJumpQuestionId());
                 optionVOList.add(optionVO);
             }
 

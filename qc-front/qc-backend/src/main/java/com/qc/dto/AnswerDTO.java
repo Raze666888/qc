@@ -14,7 +14,6 @@ public class AnswerDTO {
 
     private String respondentPhone;
 
-    @NotNull(message = "IP地址不能为空")
     private String respondentIp;
 
     @NotEmpty(message = "答题详情不能为空")
